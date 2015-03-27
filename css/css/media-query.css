@@ -16,6 +16,9 @@
   #contents #main .post > p {
     width: 100% !important;
   }
+  #covor img {
+    width: 100%;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -29,7 +32,7 @@
     margin-top: 0px;
   }
   #contents {
-    width: 930px;
+    max-width: 930px;
   }
 }
 /* Large devices (large desktops, 1200px and up) */

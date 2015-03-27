@@ -47,10 +47,6 @@
 @height2: 20px; // Appears 2 times
 @height3: 68px; // Appears 2 times
 
-* {
-  margin: 0;
-  padding: 0;
-}
 html {
   _overflow-y: scroll;
 }
@@ -80,6 +76,7 @@ h2 {
   color: @color0;
   font-size: 1.2em;
   font-weight: normal;
+  margin-top: 0;    
   margin-bottom: 15px;
   padding: 5px 0;
   text-align: center;
@@ -109,14 +106,30 @@ a {
     color: @color1;
   }
 }
+ul {
+  padding: 0;
+}
 
 /*全体*/
 #container {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-  text-align: center;
-  width: @width24;
+  /* Bootstrap Custom */
+  .container {
+    max-width: 930px;    
+    .row {
+      &-panel {
+        .panel-default;
+        background-color: @color0;
+        margin: 0;
+      }
+    }
+    .col {
+      &-panel {
+        &:last-child {
+          border-left: 1px @color2 solid;
+        }
+      }
+    }
+  }
 }
 #headline {
   background-color: @color9;
@@ -125,6 +138,7 @@ a {
 }
 #header {
   .shadow-default;
+  margin-bottom: 15px;
   background-color: @color0;
   height: 60px;
   text-align: center;
@@ -132,59 +146,59 @@ a {
 }
 #cover {
   .shadow-default;
-  height: 100px;
-  margin: 15px auto;
-  width: @width19;
+  margin-bottom: 15px;
+  // height: 100px;
+  // margin: -15px auto;
+  // width: @width19;
 }
 .contents {
   .panel-default;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-  width: @width19;
+  // margin: 0 auto;
+  // overflow: hidden;
+  // padding: 0;
+  // width: @width19;
   background-color: @color0;
   border:1px @color2 solid;  
   text-align: center;  
 }
 #main {
-  border-left: 1px @color2 solid;
   color: @color1;
-  text-align: left;
+  text-align: center;
+  padding: 15px 0 15px 0px;
   // width: 666px;
   .pic {
     .shadow-default;
-
     border: 8px @color5 solid;
-    margin: 15px 0 15px 10px;
-    padding: 0;
   }
 }
-#side {
+#side {  
   background-color: @color0;
   color: @color1;
   font-size: 0.9em;
   // width: @width21;
   ul {
     line-height: 0;
+    margin: 15px 0;
   }
   li {
-    .panel-default;
-
     list-style-type: none;
     margin-bottom: 15px;
     padding-left: 0;
+    img {
+      .panel-default;
+    }
   }
 }
 #footer-nav {
   // clear: both;
   .clearfix;
   margin: 15px auto;
-  width: @width19;
+  // width: @width19;
   .nav-left {
     float: left;
     padding-bottom: 15px;
     padding-right: 15px;
-    width: 65px;
+    // width: 65px;
   }
   .nav-right {
     color: @color1;
@@ -193,7 +207,7 @@ a {
     line-height: 150%;
     padding-top: 0.75em;
     text-align: left;
-    width: 820px;
+    // width: 820px;
   }
 }
 #town {
@@ -212,7 +226,7 @@ a {
   margin: 0;
   padding: 10px 0;
   text-align: center;
-  width: @width24;
+  // width: @width24;
   .copy {
     color: @color2;
   }
@@ -250,7 +264,7 @@ a {
     position:fixed;
     right:0;
     text-decoration: none;
-    width:@width16;
+    // width:@width16;
     &:hover {
       background-image: url(../recruit/images/arbeit/voice_img_over.png);
       background-position: right top;

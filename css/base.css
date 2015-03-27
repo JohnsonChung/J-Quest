@@ -27,53 +27,53 @@
   box-shadow: 0 0 5px rgba(0,0,0,.50);
 }
 #J-Quest-Navbar.navbar-default {
-  background-color: #333333;
-  border-bottom: 4px solid #ffffff;
+  background-color: #00a465;
+  border-bottom: 4px solid #8fc31f;
   font-size: 14px;
 }
 #J-Quest-Navbar.navbar-default .navbar-brand {
   color: #ffffff;
 }
 #J-Quest-Navbar.navbar-default .navbar-nav > li > a {
-  background-color: #ffffff;
+  background-color: #8fc31f;
   color: #e6e6e6;
 }
 #J-Quest-Navbar.navbar-default .navbar-nav > li > a:hover {
-  background-color: #ffffff;
-  background: -webkit-linear-gradient(top, #333333 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, #333333 0%, #ffffff 100%);
+  background-color: #8fc31f;
+  background: -webkit-linear-gradient(top, #00a465 0%, #8fc31f 100%);
+  background: linear-gradient(to bottom, #00a465 0%, #8fc31f 100%);
   color: #ffffff;
 }
 #J-Quest-Navbar.navbar-default .navbar-nav > li > a:focus {
-  background-color: #ffffff;
-  background: -webkit-linear-gradient(top, #333333 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, #333333 0%, #ffffff 100%);
+  background-color: #8fc31f;
+  background: -webkit-linear-gradient(top, #00a465 0%, #8fc31f 100%);
+  background: linear-gradient(to bottom, #00a465 0%, #8fc31f 100%);
   color: #ffffff;
 }
 #J-Quest-Navbar.navbar-default .navbar-nav > .active > a {
-  background-color: #ffffff;
+  background-color: #8fc31f;
   color: #ffffff;
 }
 #J-Quest-Navbar.navbar-default .navbar-nav > .active > a:hover {
-  background-color: #ffffff;
+  background-color: #8fc31f;
   color: #ffffff;
 }
 #J-Quest-Navbar.navbar-default .navbar-nav > .active > a:focus {
-  background-color: #ffffff;
+  background-color: #8fc31f;
   color: #ffffff;
 }
 #J-Quest-Navbar.navbar-default .navbar-toggle {
-  border-color: #ffffff;
+  border-color: #8fc31f;
   color: white;
 }
 #J-Quest-Navbar.navbar-default .navbar-toggle:hover {
-  background-color: #ffffff;
+  background-color: #8fc31f;
 }
 #J-Quest-Navbar.navbar-default .navbar-toggle:hover .icon-bar {
   background-color: white;
 }
 #J-Quest-Navbar.navbar-default .navbar-toggle:focus {
-  background-color: #ffffff;
+  background-color: #8fc31f;
 }
 #J-Quest-Navbar.navbar-default .navbar-toggle:focus .icon-bar {
   background-color: white;
@@ -192,6 +192,9 @@
   #contents #main .post > p {
     width: 100% !important;
   }
+  #covor img {
+    width: 100%;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -205,7 +208,7 @@
     margin-top: 0px;
   }
   #contents {
-    width: 930px;
+    max-width: 930px;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -249,10 +252,6 @@
 }
 /* LESS Document */
 /* ============ベース指定 ================= */
-* {
-  margin: 0;
-  padding: 0;
-}
 html {
   _overflow-y: scroll;
 }
@@ -289,6 +288,7 @@ h2 {
   color: #ffffff;
   font-size: 1.2em;
   font-weight: normal;
+  margin-top: 0;
   margin-bottom: 15px;
   padding: 5px 0;
   text-align: center;
@@ -316,13 +316,31 @@ a:hover {
   border: 0;
   color: #333333;
 }
+ul {
+  padding: 0;
+}
 /*全体*/
 #container {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-  text-align: center;
-  width: 100%;
+  /* Bootstrap Custom */
+}
+#container .container {
+  max-width: 930px;
+}
+#container .container .row-panel {
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+  background-color: #ffffff;
+  margin: 0;
+}
+#container .container .col-panel:last-child {
+  border-left: 1px #dbdbdb solid;
 }
 #headline {
   background-color: #00a465;
@@ -333,6 +351,7 @@ a:hover {
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
   box-shadow: 0 0 5px rgba(0,0,0,.50);
+  margin-bottom: 15px;
   background-color: #ffffff;
   height: 60px;
   text-align: center;
@@ -342,9 +361,7 @@ a:hover {
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
   box-shadow: 0 0 5px rgba(0,0,0,.50);
-  height: 100px;
-  margin: 15px auto;
-  width: 900px;
+  margin-bottom: 15px;
 }
 .contents {
   -webkit-border-radius: 5px;
@@ -356,26 +373,20 @@ a:hover {
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
   box-shadow: 0 0 5px rgba(0,0,0,.50);
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 0;
-  width: 900px;
   background-color: #ffffff;
   border: 1px #dbdbdb solid;
   text-align: center;
 }
 #main {
-  border-left: 1px #dbdbdb solid;
   color: #333333;
-  text-align: left;
+  text-align: center;
+  padding: 15px 0 15px 0px;
 }
 #main .pic {
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
   box-shadow: 0 0 5px rgba(0,0,0,.50);
   border: 8px #f6f4d8 solid;
-  margin: 15px 0 15px 10px;
-  padding: 0;
 }
 #side {
   background-color: #ffffff;
@@ -384,8 +395,14 @@ a:hover {
 }
 #side ul {
   line-height: 0;
+  margin: 15px 0;
 }
 #side li {
+  list-style-type: none;
+  margin-bottom: 15px;
+  padding-left: 0;
+}
+#side li img {
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
@@ -395,14 +412,10 @@ a:hover {
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
   box-shadow: 0 0 5px rgba(0,0,0,.50);
-  list-style-type: none;
-  margin-bottom: 15px;
-  padding-left: 0;
 }
 #footer-nav {
   zoom: 1;
   margin: 15px auto;
-  width: 900px;
 }
 #footer-nav:before,
 #footer-nav:after {
@@ -416,7 +429,6 @@ a:hover {
   float: left;
   padding-bottom: 15px;
   padding-right: 15px;
-  width: 65px;
 }
 #footer-nav .nav-right {
   color: #333333;
@@ -425,7 +437,6 @@ a:hover {
   line-height: 150%;
   padding-top: 0.75em;
   text-align: left;
-  width: 820px;
 }
 #town {
   background: url(../images/town.png) repeat-x;
@@ -442,7 +453,6 @@ a:hover {
   margin: 0;
   padding: 10px 0;
   text-align: center;
-  width: 100%;
 }
 #footer .copy {
   color: #dbdbdb;
@@ -475,7 +485,6 @@ a:hover {
   position: fixed;
   right: 0;
   text-decoration: none;
-  width: 150px;
 }
 #link_voice a:hover {
   background-image: url(../recruit/images/arbeit/voice_img_over.png);
@@ -608,7 +617,6 @@ a:hover {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .concept h3 {
   border-bottom: 1px #916c47 solid;
@@ -639,7 +647,6 @@ a:hover {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .concept .box1 {
   -webkit-border-radius: 5px;
@@ -655,7 +662,6 @@ a:hover {
   margin: 15px 0;
   padding: 15px;
   text-align: left;
-  width: 604px;
 }
 /*商品・サービス*/
 .service {
@@ -686,7 +692,6 @@ a:hover {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .service h3 {
   border-bottom: 1px #9e408c solid;
@@ -699,33 +704,12 @@ a:hover {
   padding-bottom: 2px;
   padding-left: 10px;
 }
-.service .main_l {
+.service .thumbnail {
   -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
   -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
   box-shadow: 0 0 5px rgba(0,0,0,.50);
   border: 6px #f6f4d8 solid;
-  float: left;
-  margin-right: 15px;
-  width: 190px;
-}
-.service .main_m {
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
-  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
-  box-shadow: 0 0 5px rgba(0,0,0,.50);
-  border: 6px #f6f4d8 solid;
-  float: left;
-  margin: 0;
-  width: 190px;
-}
-.service .main_r {
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
-  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
-  box-shadow: 0 0 5px rgba(0,0,0,.50);
-  border: 6px #f6f4d8 solid;
-  float: right;
-  margin-left: 10px;
   padding: 0px;
-  width: 190px;
 }
 .service .main_r2 {
   float: right;
@@ -744,19 +728,6 @@ a:hover {
   margin: 15px 0;
   padding: 15px;
   text-align: center;
-  width: 604px;
-}
-.banner_l {
-  float: left;
-  padding-right: 15px;
-  width: 200px;
-}
-.banner_r {
-  float: right;
-  font-size: 0.8em;
-  line-height: 120%;
-  padding-right: 0;
-  width: 420px;
 }
 /*ご利用方法*/
 .howto {
@@ -780,7 +751,6 @@ a:hover {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .howto h3 {
   border-bottom: 1px #77ab2c solid;
@@ -815,7 +785,6 @@ a:hover {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .shop h3 {
   border-bottom: 1px #e98806 solid;
@@ -834,7 +803,6 @@ table.map {
   border: #dbdbdb 1px solid;
   empty-cells: show;
   margin: 10px 0;
-  width: 636px;
 }
 table.map th {
   background-color: #f4cb93;
@@ -891,7 +859,6 @@ table.map td.address {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .campaign h3 {
   background-color: #ffffcc;
@@ -941,6 +908,9 @@ table.map td.address {
 }
 /*採用情報*/
 .recruit {
+  text-align: center;
+}
+.recruit p {
   text-align: left;
 }
 .recruit ul li {
@@ -973,7 +943,6 @@ table.map td.address {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .recruit h3 {
   border-bottom: 1px #165eaa solid;
@@ -1004,7 +973,6 @@ table.map td.address {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .recruit h5 {
   -webkit-border-radius: 5px;
@@ -1039,6 +1007,9 @@ table.map td.address {
 .recruit h6 a:hover {
   color: #333333;
   text-decoration: none;
+}
+.recruit .col-sm-6 {
+  padding: 0 15px 15px 15px;
 }
 .recruit .btn {
   -webkit-border-radius: 7px;
@@ -1160,7 +1131,6 @@ table.entry {
   border: #dbdbdb 1px solid;
   empty-cells: show;
   margin: 10px 0;
-  width: 636px;
 }
 table.entry td {
   border-collapse: collapse;
@@ -1173,7 +1143,6 @@ table.entry td.title {
   font-size: 16px;
   padding: 6px 0;
   text-align: center;
-  width: 80px;
 }
 table.entry td.about {
   color: #333333;
@@ -1193,7 +1162,6 @@ table.staffschedule {
   border-spacing: 0;
   empty-cells: show;
   margin: 10px 0;
-  width: 636px;
 }
 table.staffschedule td {
   border-collapse: collapse;
@@ -1204,7 +1172,6 @@ table.staffschedule td.profile {
   padding: 3px 0;
   text-align: left;
   vertical-align: top;
-  width: 230px;
 }
 table.staffschedule td.timetable {
   padding: 3px 0;
@@ -1236,7 +1203,6 @@ table.staffschedule td.timetable a {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .faq h3 {
   border-bottom: 1px #128950 solid;
@@ -1375,7 +1341,6 @@ table.company td.about {
   overflow: hidden;
   padding: 5px 0;
   text-align: center;
-  width: 636px;
 }
 .contact h3 {
   border-bottom: 1px #666666 solid;
@@ -1400,7 +1365,6 @@ table.form {
   border: #dbdbdb 1px solid;
   empty-cells: show;
   margin: 10px 0;
-  width: 636px;
 }
 table.form td {
   border-collapse: collapse;
@@ -1412,11 +1376,9 @@ table.form td.title {
   color: #333333;
   padding: 6px;
   text-align: left;
-  width: 230px;
 }
 table.form td.about {
   color: #333333;
   padding: 6px 10px;
   text-align: left;
-  width: 400px;
 }
