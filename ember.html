@@ -1,0 +1,111 @@
+<head>
+    <title>Ember</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
+    <script type="text/javascript" src="bower_components/ember/ember.min.js"></script>
+    <script type="text/javascript" src="bower_components/ember/ember-template-compiler.js"></script>
+</head>
+
+<body>
+    <h1>Ember Practice Page</h1>
+
+    <!-- Handlebars Templates -->
+    <!-- homepage -->
+    <script type="text/x-handlebars" data-template-name="application">    
+        <ul>
+            <li><a href="#" {{action gotoPageA}}>PageA</a></li>
+            <li><a href="#" {{action gotoPageB}}>PageB</a></li>
+            <li><a href="#" {{action gotoPageC}}>PageC</a></li>
+        </ul>
+    	<h2>{{appName}}</h2>
+    	<div>
+    		{{outlet}}
+    	</div>
+    </script>
+    <!-- subpages -->
+    <script type="text/x-handlebars" data-template-name="pageA">
+    	<h2>A</h2>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="pageB">
+    	<h2>B</h2>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="pageC">
+    	<h2>C</h2>
+    </script>
+
+
+    <!-- ember script -->
+    <script>
+    // Create ember object
+    App = Ember.Application.create();
+
+    // 
+    App.ApplicationRoute = Ember.Route.extend({
+        setupController: function(controller) {
+            // `controller` is the instance of ApplicationController
+            controller.set('title', "Hello world!");
+        }
+    });
+
+
+    // Template Preset
+    // homepage
+    App.ApplicationController = Ember.Controller.extend({
+        appName: 'My First Example'
+    });
+    App.ApplicationView = Ember.View.extend({
+	    templateName: 'application'
+	});
+    // subpages
+    App.pageAController = Ember.Controller.extend();
+	App.pageAView = Ember.View.extend({
+	    templateName: 'pageA'
+	});
+
+	App.pageBController = Ember.Controller.extend();
+	App.pageBView = Ember.View.extend({
+	    templateName: 'pageB'
+	});
+
+	App.pageCController = Ember.Controller.extend();
+	App.pageCView = Ember.View.extend({
+	    templateName: 'pageC'
+	});
+
+
+	// ROUTE
+    App.Router = Ember.Router.extend({        
+        enableLogging: true,
+        location: 'hash',
+
+    	root: Ember.Route.extend({
+	        // EVENTS
+	        gotoPageA: Ember.Route.transitionTo('pageA'),
+	        gotoPageB: Ember.Route.transitionTo('pageB'),
+	        gotoPageC: Ember.Route.transitionTo('pageC'),
+
+	        // STATES
+	        pageA: Ember.Route.extend({
+	            route: '/',
+	            connectOutlets: function(router, context) {
+	                router.get('applicationController').connectOutlet('pageA');
+	            }
+	        }),
+	        pageB: Ember.Route.extend({
+	            route: '/',
+	            connectOutlets: function(router, context) {
+	                router.get('applicationController').connectOutlet('pageB');
+	            }
+	        }),
+	        pageC: Ember.Route.extend({
+	            route: '/',
+	            connectOutlets: function(router, context) {
+	                router.get('applicationController').connectOutlet('pageC');
+	            }
+	        })
+    	})
+    });
+    </script>
+</body>

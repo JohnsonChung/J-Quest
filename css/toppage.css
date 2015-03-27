@@ -1,0 +1,628 @@
+@charset "utf-8";
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.panel-default {
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+}
+.shadow-default {
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+}
+#J-Quest-Navbar.navbar-default {
+  background-color: #00a465;
+  border-bottom: 4px solid #8fc31f;
+  font-size: 14px;
+}
+#J-Quest-Navbar.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+#J-Quest-Navbar.navbar-default .navbar-nav > li > a {
+  background-color: #8fc31f;
+  color: #e6e6e6;
+}
+#J-Quest-Navbar.navbar-default .navbar-nav > li > a:hover {
+  background-color: #8fc31f;
+  background: -webkit-linear-gradient(top, #00a465 0%, #8fc31f 100%);
+  background: linear-gradient(to bottom, #00a465 0%, #8fc31f 100%);
+  color: #ffffff;
+}
+#J-Quest-Navbar.navbar-default .navbar-nav > li > a:focus {
+  background-color: #8fc31f;
+  background: -webkit-linear-gradient(top, #00a465 0%, #8fc31f 100%);
+  background: linear-gradient(to bottom, #00a465 0%, #8fc31f 100%);
+  color: #ffffff;
+}
+#J-Quest-Navbar.navbar-default .navbar-nav > .active > a {
+  background-color: #8fc31f;
+  color: #ffffff;
+}
+#J-Quest-Navbar.navbar-default .navbar-nav > .active > a:hover {
+  background-color: #8fc31f;
+  color: #ffffff;
+}
+#J-Quest-Navbar.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #8fc31f;
+  color: #ffffff;
+}
+#J-Quest-Navbar.navbar-default .navbar-toggle {
+  border-color: #8fc31f;
+  color: white;
+}
+#J-Quest-Navbar.navbar-default .navbar-toggle:hover {
+  background-color: #8fc31f;
+}
+#J-Quest-Navbar.navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: white;
+}
+#J-Quest-Navbar.navbar-default .navbar-toggle:focus {
+  background-color: #8fc31f;
+}
+#J-Quest-Navbar.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: white;
+}
+#J-Quest-Navbar.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse {
+  border: none;
+  max-height: 450px;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav {
+  /*　リンク色指定 */
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li a {
+  text-shadow: 1px 1px 2px black;
+  font-size: 1.2em;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(1) a {
+  background: none;
+  text-align: right;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(2) a {
+  background: #593d1e;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(3) a {
+  background: #c472ac;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(4) a {
+  background: #a7cf21;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(5) a {
+  background: #fb801a;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(6) a {
+  background: #fbc122;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(7) a {
+  background: #58a2db;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(8) a {
+  background: #46b9aa;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(9) a {
+  background: #e2bd97;
+}
+#J-Quest-Navbar.navbar-default .navbar-collapse .navbar-nav li:nth-child(10) a {
+  background: #7f7f7f;
+}
+/* Home page top Block navs */
+#mobile-navbricks .brick-top {
+  background-image: url("../recruit/images/rc08.jpg");
+  background-position: center;
+  height: 12em;
+}
+#mobile-navbricks .nav {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+#mobile-navbricks .nav li {
+  display: table;
+  padding: 0;
+  height: 5em;
+  /*　リンク色指定 */
+}
+#mobile-navbricks .nav li:nth-child(1) {
+  background: #593d1e;
+}
+#mobile-navbricks .nav li:nth-child(2) {
+  background: #c472ac;
+}
+#mobile-navbricks .nav li:nth-child(3) {
+  background: #a7cf21;
+}
+#mobile-navbricks .nav li:nth-child(4) {
+  background: #fb801a;
+}
+#mobile-navbricks .nav li:nth-child(5) {
+  background: #fbc122;
+}
+#mobile-navbricks .nav li:nth-child(6) {
+  background: #58a2db;
+}
+#mobile-navbricks .nav li:nth-child(7) {
+  background: #46b9aa;
+}
+#mobile-navbricks .nav li:nth-child(8) {
+  background: #e2bd97;
+}
+#mobile-navbricks .nav li:nth-child(9) {
+  background: #7f7f7f;
+}
+#mobile-navbricks .nav a {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  padding: 0;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* xl devices (tablets, 767px and down) */
+@media (min-width: 0px) and (max-width: 767px) {
+  #message {
+    font-size: 0.9em !important;
+  }
+  #contents {
+    margin-top: 60px;
+  }
+  #contents #side,
+  #contents #main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #contents #main .post > p {
+    width: 100% !important;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #contents {
+    margin-top: 60px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #contents {
+    margin-top: 0px;
+  }
+  #contents {
+    width: 930px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+/* Change Navbar Collpase breakpoint to 992px */
+@media (max-width: 992px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,
+  .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
+}
+/* LESS Document */
+/* ============　変数指定 ================= */
+/* ============ベース指定 ================= */
+html {
+  _overflow-y: scroll;
+}
+body {
+  background: url(../images/bg.jpg) repeat;
+  font-size: 14px;
+  height: 100%;
+  line-height: 130%;
+  overflow: auto;
+}
+li {
+  padding-left: 0;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+/*見出し*/
+h1 {
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+}
+h2 {
+  border-bottom: 1px #8fc31f solid;
+  border-left: 6px #8fc31f solid;
+  color: #666666;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 27px;
+  margin-bottom: 15px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+h3 {
+  color: #333333;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 20px 0;
+  padding: 7px 0;
+}
+a:link {
+  border: 0;
+  color: #00a465;
+}
+a:visited {
+  border: 0;
+  color: #00a465;
+}
+a:hover {
+  border: 0;
+  color: #333333;
+  text-decoration: none;
+}
+/*全体*/
+#container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+#container .column {
+  float: left;
+}
+#headline {
+  background-color: #00a465;
+  height: 5px;
+  width: 100%;
+}
+#contents {
+  text-align: center;
+  padding-top: 15px;
+}
+#contents #cover {
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+  behavior: url(http://www.j-quest.jp/css/PIE.htc);
+  padding: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+#contents #cover object {
+  width: 100%;
+}
+#contents #message {
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+  background-color: #d7f8eb;
+  behavior: url(http://www.j-quest.jp/css/PIE.htc);
+  border: 3px #00a465 solid;
+  color: #00a465;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 150%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+#contents #message p {
+  margin: 10px 0;
+}
+#contents #main {
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+  background-color: #ffffff;
+  behavior: url(http://www.j-quest.jp/css/PIE.htc);
+  border: 1px #dbdbdb solid;
+  color: #333333;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  text-align: left;
+}
+#contents #main .post {
+  zoom: 1;
+}
+#contents #main .post:before,
+#contents #main .post:after {
+  content: "";
+  display: table;
+}
+#contents #main .post:after {
+  clear: both;
+}
+#contents #main .post > span {
+  color: #333333;
+  margin-bottom: 8px;
+  float: left;
+  font-weight: bold;
+}
+#contents #main .post > span:before {
+  content: url("../images/i_new_over.png");
+  display: block;
+  float: left;
+  margin-right: 15px;
+}
+#contents #main .post > span:after {
+  content: attr(data-time);
+  display: block;
+  float: left;
+  padding-top: 2px;
+}
+#contents #main .post > p {
+  border-left: 1px #dbdbdb solid;
+  color: #333333;
+  float: right;
+  font-size: 0.85em;
+  padding: 1px 0 10px 15px;
+  text-decoration: none;
+  width: 450px;
+  margin-bottom: 0;
+}
+#contents #side {
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
+  box-shadow: 0 0 5px rgba(0,0,0,.50);
+  background-color: #CAE092;
+  behavior: url(http://www.j-quest.jp/css/PIE.htc);
+  color: #333333;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  margin-left: -28px;
+}
+#contents #side img {
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  behavior: url(http://www.j-quest.jp/css/PIE.htc);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+}
+#contents #footer-nav {
+  clear: both;
+  margin: 15px 0;
+  width: 100%;
+}
+#contents #footer-nav .nav-left {
+  float: left;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  width: 65px;
+}
+#contents #footer-nav .nav-right {
+  color: #333333;
+  float: right;
+  font-size: 1em;
+  line-height: 150%;
+  padding-top: 0.25em;
+  text-align: left;
+  width: 820px;
+}
+#contents #footer-nav .nav-right2 {
+  color: #666666;
+  float: right;
+  font-size: 0.75em;
+  line-height: 150%;
+  padding-top: 0.5em;
+  text-align: left;
+  width: 810px;
+}
+#contents #footer-nav .nav-mobile li {
+  list-style: none;
+  margin-bottom: 3px;
+}
+#town {
+  background: url(../images/town.png) repeat-x;
+  bottom: 30px;
+  height: 42px;
+  margin: 0;
+}
+#footer {
+  background-color: #000000;
+  bottom: 0;
+  clear: both;
+  color: #ffffff;
+  font-size: 0.8em;
+  line-height: 120%;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+#footer .copy {
+  color: #dbdbdb;
+}
+/*リターントップ*/
+#return_top a {
+  background: url(../images/b_top_out.png) no-repeat left top;
+  bottom: 100px;
+  display: block;
+  height: 140px;
+  position: absolute;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  width: 80px;
+}
+#return_top a:hover {
+  background: url(../images/b_top_over.png) no-repeat right top;
+  text-decoration: none;
+}
+/* ============ class指定================= */
+/*インナー*/
+.inner10 {
+  margin: 0;
+  padding: 10px;
+}
+.inner15 {
+  margin: 0;
+  padding: 15px;
+}
+/*スペース*/
+.sp_tb {
+  padding: 10px 0;
+}
+.sp_t {
+  padding-top: 10px;
+}
+.sp_b {
+  padding-bottom: 10px;
+}
+/*センター*/
+.center {
+  text-align: center;
+}
+/*新着情報*/
+.new {
+  float: left;
+  padding-right: 15px;
+  width: 40px;
+}
+/*文字*/
+/*白*/
+.xl_wh {
+  color: #ffffff;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.l_wh {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+.m_wh {
+  color: #ffffff;
+  font-size: 1.0em;
+}
+.s_wh {
+  color: #ffffff;
+  font-size: 0.8em;
+}
+/* POPUP */
+#element_to_pop_up {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #000000;
+  display: none;
+  min-height: 180px;
+  min-width: 500px;
+  padding: 15px;
+}
+.b-close {
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  top: 3px;
+}
+#left1 {
+  width: 400px;
+}
+#right {
+  width: 300px;
+}
+.text {
+  background-color: #0033ff;
+  color: #ffffff;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 17px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+  padding: 5px;
+}
+.text2 {
+  color: #0033cc;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  text-align: left;
+}
+.text3 {
+  color: #000000;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 5px;
+  padding-top: 0px;
+  text-align: left;
+}

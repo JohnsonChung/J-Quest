@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+@import '../bower_components/lesshat/build/lesshat.less';
+@import '../css/less/utility.less';
+@import '../css/less/mixin.less';
+@import '../css/less/navbar.less';
+@import '../css/less/media-query.less';
+
+
+/* LESS Document */
+ /* ============ベース指定 ================= */ 
+
+// Color variables (appears count calculates by raw css)
+@color0: #ffffff; // Appears 23 times
+@color1: #333333; // Appears 19 times
+@color2: #dbdbdb; // Appears 14 times
+@color3: #666666; // Appears 11 times
+@color4: #165eaa; // Appears 7 times
+@color5: #f6f4d8; // Appears 5 times
+@color6: #eac40b; // Appears 4 times
+@color7: #916c47; // Appears 4 times
+@color8: #128950; // Appears 4 times
+@color9: #00a465; // Appears 4 times
+@color10: #9e408c; // Appears 3 times
+@color11: #003366; // Appears 2 times
+@color12: #910000; // Appears 2 times
+@color13: #77ab2c; // Appears 2 times
+@color14: #000000; // Appears 2 times
+@color15: #a0927c; // Appears 2 times
+@color16: #8fc31f; // Appears 2 times
+@color17: #e98806; // Appears 2 times
+
+
+// Width variables (appears count calculates by raw css)
+@width0: 400px; // Appears 3 times
+@width11: 200px; // Appears 2 times
+@width16: 150px; // Appears 2 times
+@width17: 636px; // Appears 16 times
+@width18: 190px; // Appears 3 times
+@width19: 900px; // Appears 3 times
+@width20: 604px; // Appears 2 times
+@width21: 230px; // Appears 3 times
+@width22: 80px; // Appears 2 times
+@width24: 100%; // Appears 4 times
+
+// Height variables (appears count calculates by raw css)
+@height2: 20px; // Appears 2 times
+@height3: 68px; // Appears 2 times
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  _overflow-y: scroll;
+}
+body {
+  background: url(../images/bg.jpg) repeat;
+  font-family: 'Arial' , 'MS ゴシック' , 'メイリオ' , sans-serif;
+  font-size: 14px;
+  height: 100%;
+  line-height: 140%;
+  overflow: auto;
+}
+img {
+  border: 0;
+  text-align: center;
+  vertical-align:top;
+}
+
+/*見出し*/
+h1 {
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+}
+h2 {
+  .panel-default;
+  background: url(../images/gra_gr.jpg) repeat-x;
+  color: @color0;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  text-align: center;
+}
+h3 {
+  border-bottom: 1px @color16 solid;
+  border-left: 6px @color16 solid;
+  color: @color3;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 27px;
+  margin-bottom: 15px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+a {
+  &:link {
+    border: 0;
+    color: @color9;
+  }
+  &:visited {
+    border: 0;
+    color: @color9;
+  }
+  &:hover {
+    border: 0;
+    color: @color1;
+  }
+}
+
+/*全体*/
+#container {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  width: @width24;
+}
+#headline {
+  background-color: @color9;
+  height: 5px;
+  width: @width24;
+}
+#header {
+  .shadow-default;
+  background-color: @color0;
+  height: 60px;
+  text-align: center;
+  width: @width24;
+}
+#cover {
+  .shadow-default;
+  height: 100px;
+  margin: 15px auto;
+  width: @width19;
+}
+.contents {
+  .panel-default;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  width: @width19;
+  background-color: @color0;
+  border:1px @color2 solid;  
+  text-align: center;  
+}
+#main {
+  border-left: 1px @color2 solid;
+  color: @color1;
+  text-align: left;
+  // width: 666px;
+  .pic {
+    .shadow-default;
+
+    border: 8px @color5 solid;
+    margin: 15px 0 15px 10px;
+    padding: 0;
+  }
+}
+#side {
+  background-color: @color0;
+  color: @color1;
+  font-size: 0.9em;
+  // width: @width21;
+  ul {
+    line-height: 0;
+  }
+  li {
+    .panel-default;
+
+    list-style-type: none;
+    margin-bottom: 15px;
+    padding-left: 0;
+  }
+}
+#footer-nav {
+  // clear: both;
+  .clearfix;
+  margin: 15px auto;
+  width: @width19;
+  .nav-left {
+    float: left;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    width: 65px;
+  }
+  .nav-right {
+    color: @color1;
+    float: right;
+    font-size: 1em;
+    line-height: 150%;
+    padding-top: 0.75em;
+    text-align: left;
+    width: 820px;
+  }
+}
+#town {
+  background: url(../images/town.png) repeat-x;
+  // bottom: 30px;
+  height: 42px;
+  margin: 0;
+}
+#footer {
+  background-color: @color14;
+  bottom:0;
+  clear: both;
+  color: @color0;
+  font-size: 0.8em;
+  line-height: 120%;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  width: @width24;
+  .copy {
+    color: @color2;
+  }
+}
+
+/*リターントップ*/
+#return_top {
+  a {
+    background:url(../images/b_top_out.png) no-repeat left top;
+    bottom:50px;
+    display:block;
+    height:140px;
+    position:absolute;
+    position:fixed;
+    right:0;
+    text-decoration: none;
+    width:@width22;
+    &:hover {
+      background:url(../images/b_top_over.png) no-repeat right top;
+      text-decoration:none;
+    }
+  }
+}
+
+/*右下のリンク（リクルート用）*/
+#link_voice {
+  a {
+    background-image: url(../recruit/images/arbeit/voice_img_out.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    bottom:128px;
+    display:block;
+    height:@height3;
+    position:absolute;
+    position:fixed;
+    right:0;
+    text-decoration: none;
+    width:@width16;
+    &:hover {
+      background-image: url(../recruit/images/arbeit/voice_img_over.png);
+      background-position: right top;
+      background-repeat: no-repeat;
+      text-decoration:none;
+    }
+  }
+}
+#link_form {
+  a {
+    background-image: url(../recruit/images/arbeit/form_img_out.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    bottom:50px;
+    display:block;
+    height:@height3;
+    position:absolute;
+    position:fixed;
+    right:0;
+    text-decoration: none;
+    width:@width16;
+    &:hover {
+      background-image: url(../recruit/images/arbeit/form_img_over.png);
+      background-position: right top;
+      background-repeat: no-repeat;
+      text-decoration:none;
+    }
+  }
+}
+
+/* ============ class指定================= */
+
+/*インナー*/
+.inner10 {
+  margin: 0;
+  padding: 10px;
+}
+.inner15 {
+  margin: 0;
+  padding: 15px;
+}
+
+/*スペース*/
+.sp_tb {
+  padding: 10px 0;
+}
+.sp_t {
+  padding-top: 10px;
+}
+.sp_b {
+  padding-bottom: 10px;
+}
+
+/*クリア*/
+.clear {
+  clear: both;
+}
+
+/*センター*/
+.center {
+  text-align: center;
+}
+
+/*文字*/
+.title {
+  color: @color9;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 150%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*灰*/
+.xl_bk {
+  color: @color1;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.l_bk {
+  color: @color1;
+  font-size: 1.2em;
+}
+.m_bk {
+  color: @color1;
+  font-size: 1.0em;
+}
+.s_bk {
+  color: @color1;
+  font-size: 0.8em;
+}
+
+/*白*/
+.xl_wh {
+  color: @color0;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.l_wh {
+  color: @color0;
+  font-size: 1.2em;
+}
+.m_wh {
+  color: @color0;
+  font-size: 1.0em;
+}
+.s_wh {
+  color: @color0;
+  font-size: 0.8em;
+}
+.service_mini {
+  font-size: 10px;
+}
+
+
+/* subpages import */
+@import '../css/subpage-less/concepts.less';
+@import '../css/subpage-less/services.less';
+@import '../css/subpage-less/howtos.less';
+@import '../css/subpage-less/shops.less';
+@import '../css/subpage-less/campaign.less';
+@import '../css/subpage-less/recruitment.less';
+@import '../css/subpage-less/faq.less';
+@import '../css/subpage-less/aboutus.less';
+@import '../css/subpage-less/contactus.less';

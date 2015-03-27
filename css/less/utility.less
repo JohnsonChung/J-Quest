@@ -1,0 +1,10 @@
+// LESS Utility
+
+.outline(@px:1px; @s: solid; @c:red) { 
+	outline: @px @s @c;
+}
+.clearfix{
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
+}

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="keywords" content="JX日鉱日石エネルギー、エネオス、ENEOS、J-Quest、ジェイ･クエスト、ガソリンスタンド、コンビニエンスストア、セルフ給油" />
+    <meta name="description" content="全国に81店舗のショッピングモール併設型ガソリンスタンドを運営するJ-Quest（ジェイ･クエストのウェブサイト。企業コンセプト、店舗情報、商品・サービスの紹介、セルフガソリンスタンド、セルフ洗車のご利用方法、採用情報をご覧いただけます。" />
+    <meta name="author" content="J-Quest" />
+    <meta name="copyright" content="J-Quest" />
+    <title>J-Quest（ジェイ・クエスト）のウェブサイト</title>
+    <!-- link -->
+    <link rel="alternate" type="application/rss+xml" title="ROR" href="ror.xml" />
+    <link rel="contents" href="index.html" title="ホーム" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/toppage.css" />
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.page-scroller.js" charset="utf-8"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="js/equalHeightcolumns.js"></script> -->
+    <script type="text/javascript" src="js/rollover2.js"></script>
+    <script type="text/javascript" src="js/popUp.js"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div id="J-Quest-Navbar" class="navbar navbar-default navbar-fixed-top visible-sm visible-xs" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img height="330%" src="images/logo.png"></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-menubuilder">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html">トップページ</a></li>
+                    <li><a href="concepts.html">企業コンセプト</a>
+                    </li>
+                    <li><a href="services.html">商品・サービス</a>
+                    </li>
+                    <li><a href="howtos.html">ご利用方法</a>
+                    </li>
+                    <li><a href="shops.html">商品・サービス</a>
+                    </li>
+                    <li><a href="campaign.html">キャンペーン情報</a>
+                    </li>
+                    <li><a href="recruitment.html">採用情報</a>
+                    </li>
+                    <li><a href="faq.html">よくある質問</a>
+                    </li>
+                    <li><a href="aboutus.html">企業概要</a>
+                    </li>
+                    <li><a href="contactus.html">お問合せ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--container-->
+    <div id="container">
+        <div id="headline">&nbsp;</div>
+        <!--contents-->
+        <div id="contents" class="container">
+            <h1>J-Quest（ジェイ･クエスト）｜今までのサービスステーションにはない卓越したサービスを</h1>
+            <div id="mobile-navbricks" class="visible-sm visible-xs">
+                <div class="brick-top"></div>
+                <ul class="nav row">
+                    <li class="col-xs-4"><a href="concepts.html">企業コンセプト</a>
+                    </li>
+                    <li class="col-xs-4"><a href="services.html">商品・サービス</a>
+                    </li>
+                    <li class="col-xs-4"><a href="howtos.html">ご利用方法</a>
+                    </li>
+                    <li class="col-xs-4"><a href="shops.html">商品・サービス</a>
+                    </li>
+                    <li class="col-xs-4"><a href="campaign.html">キャンペーン</br>情報</a>
+                    </li>
+                    <li class="col-xs-4"><a href="recruitment.html">採用情報</a>
+                    </li>
+                    <li class="col-xs-4"><a href="faq.html">よくある質問</a>
+                    </li>
+                    <li class="col-xs-4"><a href="aboutus.html">企業概要</a>
+                    </li>
+                    <li class="col-xs-4"><a href="contactus.html">お問合せ</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- cover -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="cover" class="visible-lg visible-md">
+                        <script type="text/javascript" src="js/coveranime.js"></script>
+                    </div>
+                </div>
+            </div>
+            <!--/cover-->
+            <!--message-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="message">
+                        <p>東北太平洋沖地震で被災された皆様におかれましては
+                            <br />心よりお見舞い申し上げます。</p>
+                    </div>
+                </div>
+            </div>
+            <!--/message-->
+            <!--main-->
+            <div class="row">
+                <div class="col-md-9">
+                    <div id="main">
+                        <div class="inner15">
+                            <h2>新着情報</h2>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.21"></span>
+                                <p>
+                                    <strong>氷上店</strong>　週末イベント開催！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年3月21日（土）～4月5日（日）</span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.19"></span>
+                                <p>
+                                    <strong>【コーティング高崎新保のフリーダイヤル記載内容の訂正とお詫び】</strong>
+                                    <br />
+                                    <span class="campaign">2015年2月28日　及び、3月21日（※予定）の新聞折込チラシに於きまして、掲載内容に誤りがございました。皆様にご迷惑をお掛けしましたことをお詫びするとともに、下記のとおり訂正させていただきます。</span>
+                                    <br /> ≪訂正箇所≫ご予約/お問い合わせフリーダイヤル
+                                    <br />
+                                    <br /> 誤）0800-800-3398
+                                    <br /> 正）
+                                    <strong>0800-800-0762</strong>
+                                    <br /> 尚、誤った電話番号は弊社酒々井店（千葉県）へ繋がりますので、
+                                    <br /> 改めて担当者よりご連絡させていただきます。
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.13"></span>
+                                <p>
+                                    <strong>酒々井店</strong>　週末イベント開催！
+                                    <br />
+                                    <span class="campaign">毎週土・日はガソリン軽油10Ｌ以上給油で、ＢＯＸティッシュ1箱プレゼント </span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.6"></span>
+                                <p>
+                                    <strong>宮子カインズ前店</strong>　春のカーコーティングフェア開催！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年3月7日（土）～</span>。
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.6"></span>
+                                <p>
+                                    <strong>大泉店</strong>　お客様感謝デー実施！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年3月7日(土)～3月31日(火)</span>。
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.2"></span>
+                                <p>
+                                    <strong>2016年度新卒採用スタートしました。</strong>
+                                    <br />
+                                    <span class="campaign">2016年度も新卒採用を行います。</span>。
+                                    <br /> 詳しくは→
+                                    <a href="https://job.rikunabi.com/2016/company/top/r421110079/" target="_blank">リクナビ2016採用情報ページ</a>をご覧ください。
+                                    <br />
+                                    <br /><strong>【イベント情報！】</strong>
+                                    <br /> ●3月18日（水）「リクナビLIVE前橋」に参加します。
+                                    <br />&nbsp;&nbsp;詳細はこちら→<a href="https://job.rikunabi.com/2016/contents/article/c~event~live~15031819_maebashi/r/?isc=r6rcna00644" target="_blank">リクナビLIVE前橋</a>。
+                                    <br /> ●会社説明会開催。東京と群馬で会社説明会を行います。
+                                    <br /> &nbsp;&nbsp;詳細はこちら→
+                                    <a href="https://job.rikunabi.com/2016/company/seminars/r421110079/" target="_blank">会社説明会予約ページ</a>。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.27"></span>
+                                <p>
+                                    <strong>豊科店</strong>　春のカーコーティングフェア開催！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年3月1日（土）～4月30日（木）</span>。
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.27"></span>
+                                <p>
+                                    <strong>高崎新保店</strong>　週末イベント開催！！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年2月28日(土)～3月31日(火)</span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.27"></span>
+                                <p>
+                                    <strong>酒々井店</strong>　コーティングキャンペーン！
+                                    <br />
+                                    <span class="campaign">期間：2015年2月28（土）～3月31日(火)</span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.27"></span>
+                                <p>
+                                    <strong>浜松都田店</strong>　宝くじプレゼント開催！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年2月28日（土）～3月31日（火）</span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.27"></span>
+                                <p>
+                                    <strong>長野稲田店</strong>　週末イベント開催！！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年2月28日(土)～3月31日(火)</span>。
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.27"></span>
+                                <p>
+                                    <strong>名取店</strong>　週末イベント開催！！
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年2月28日(土)～3月31日(火)</span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.3.21"></span>
+                                <p>
+                                    <strong>仙台富谷店</strong>　週末イベント開催
+                                    <br />
+                                    <span class="campaign">イベント実施日：2015年2月28日(土)～3月31日(火)</span>
+                                    <br /> 詳しくは、→
+                                    <a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                            <div class="post">
+                                <!--記事-->
+                                <span data-time="2015.2.20"></span>
+                                <p>2015年3月までのTポイントお得情報
+                                    <br /> →Tポイントが通常より貯まるお得なキャンペーンを実施中です。
+                                    <br />&nbsp;対象店舗等詳しくは、<a href="campaign.html">キャンペーン情報</a>にてご確認下さい。
+                                    <br />
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/main-->
+                <!--side-->
+                <div class="col-md-3">
+                    <div id="side">
+                        <div class="inner15">
+                            <a href="recruitment.html" target="_blank"><img src="images/banner_helpwanted.png" alt="バイオガソリン" /></a>
+                            <a href="http://www.noe.jx-group.co.jp/carlife/product/biogasoline/" target="_blank"><img src="images/banner_biogus.jpg" alt="バイオガソリン" /></a>
+                            <a href="http://www.noe.jx-group.co.jp/carlife/product/vigo/" target="_blank"><img src="images/banner_vigo.jpg" alt="ヴィーゴ" /></a>
+                            <a href="https://job.rikunabi.com/2016/company/top/r421110079/" target="new">
+                                <img src="images/recnavi2016.jpg" width="200" height="60" border="0">
+                            </a>
+                            <a href="">
+                                <img src="images/keeperbanner.gif" width="200" height="60" border="0" id="modal">
+                            </a>
+                            <br />
+                            <a><img src="images/qrcode.jpg" width="132" height="132" alt="QRコード" /></a>
+                        </div>
+                    </div>
+                </div>
+                <!--/side-->
+            </div>
+            <!--/contents -->
+            <!--footer-nav-->
+            <div id="footer-nav">
+                <div class="nav-left"><img src="images/eneos65.jpg" alt="エネオス" /></div>
+                <ul class="nav-mobile visible-xs">
+                    <li>
+                        <a href="privacy.html">プライバシーポリシー</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html">企業情報</a>
+                    </li>
+                    <li>
+                        <a href="https://www.j-quest.jp/contact/contactus.html">お問合せ</a></li>
+                </ul>
+                <p class="nav-right hidden-xs">｜<a href="index.html">トップページ</a>｜<a href="concepts.html">J-Questの使命</a>｜<a href="services.html">商品・サービス</a>｜<a href="howtos.html">ご利用方法</a>｜<a href="shops.html">店舗情報</a>｜<a href="campaign.html">キャンペーン情報</a>｜<a href="recruitment.html">採用情報</a>｜<a href="faq.html">よくある質問</a>｜
+                    <br />｜<a href="aboutus.html">企業情報</a>｜<a href="https://www.j-quest.jp/contact/contactus.html">お問合せ</a>｜</p>
+                <p class="nav-right2 hidden-xs"><a href="privacy.html">プライバシーポリシー</a>｜&nbsp;当サイトご利用にあたっては、Internet Explorer 8.0以上及び同等のブラウザをお使いください。<a href="http://windows.microsoft.com/ja-JP/internet-explorer/products/ie/home" target="_blank">Microsoftのダウンロードページ</a></p>
+            </div>
+            <!--/footer-nav-->
+        </div>
+        <!--/contents-->
+        <!--街並-->
+        <div id="town">&nbsp;</div>
+        <!--/街並-->
+        <!--footer-->
+        <div id="footer">
+            <address class="copy">Copyrights &copy; 2012 J-Quest. All Rights Reserved.</address>
+        </div>
+        <!--/footer-->
+        <!--上へ戻るボタン-->
+        <div id="return_top" class="hidden-xs">
+            <a href="#top">&nbsp;</a>
+        </div>
+        <!--/上へ戻るボタン-->
+    </div>
+    <!--/container-->
+    <!-- POPUP -->
+    <div id="element_to_pop_up" class="content">
+        <a class="b-close"><img src="images/close.gif" height="20px" width="20px"></img><a/>
+            <div id="container">
+                <div id="left1" class="column">
+                    <br><img src="images/keeperlogo.gif" height="67" width="252" align="left"></img>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="width:150px;">
+                        <p class="text" style="border-radius:5px;">長野県</p>
+                    </div>
+                    <div class="text2" style="width:400px;">
+                        <p>
+                            <bold>●豊科店</bold>
+                            <br />
+                    </div>
+                    <div class="text3" style="width:400px;">
+                        フリーダイアル：0120-98-1706
+                        <br /> 所在地：長野県安曇野市豊科南穂高754-3
+                        <br /> 取扱商品：
+                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
+                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
+                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
+                        <a href="http://www.keepercoating.jp/proshop/03874.html" target="_blank">コーティング豊科店</a></p>
+                    </div>
+                    <div style="width:150px;">
+                        <p class="text" style="border-radius:5px;">群馬県</p>
+                    </div>
+                    <div class="text2" style="width:400px;">
+                        <p>
+                            <bold>●宮子カインズ前店</bold>
+                            <br />
+                    </div>
+                    <div class="text3" style="width:400px;">
+                        フリーダイアル：0120-934-980
+                        <br /> 所在地：群馬県伊勢崎市宮子町3146
+                        <br /> 取扱商品：
+                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
+                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
+                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
+                        <a href="http://www.keepercoating.jp/proshop/03911.html" target="_blank">コーティング宮子カインズ前店</a></p>
+                    </div>
+                    <div class="text2" style="width:400px;">
+                        <p>
+                            <bold>●高崎新保店</bold>
+                            <br />
+                    </div>
+                    <div class="text3" style="width:400px;">
+                        フリーダイアル：0800-8000-762
+                        <br /> 所在地：群馬県高崎市日高町1054-1
+                        <br /> 取扱商品：
+                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
+                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
+                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
+                        <a href="http://www.keepercoating.jp/proshop/04699.html" target="_blank">コーティング高崎新保店</a></p>
+                    </div>
+                    <div style="width:150px;">
+                        <p class="text" style="border-radius:5px;">千葉県</p>
+                    </div>
+                    <div class="text2" style="width:400px;">
+                        <p>
+                            <bold>●酒々井店</bold>
+                            <br />
+                    </div>
+                    <div class="text3" style="width:400px;">
+                        電話：043-310-7516
+                        <br /> 所在地：千葉県印旛郡酒々井町飯積1丁目2-9
+                        <br /> 取扱商品：
+                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
+                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
+                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
+                        <a href="http://www.keepercoating.jp/proshop/04254.html" target="_blank">コーティング酒々井店</a></p>
+                    </div>
+                </div>
+                <div id="right" class="column">
+                    <br><img src="images/keepersite.gif" height="145" width="230"></img>
+                    <p><a href="http://www.keepercoating.jp/" target="_blank">KeeperProホームページ</a></p>
+                    <br />
+                    <img src="images/qr_toyoshina.jpg" width="84" height="83" alt="toyoshinaQR" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <img src="images/qr_miyako.jpg" width="84" height="83" alt="qrMiyako" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <img src="images/qr_takasakishinbo.jpg" width="84" height="83" alt="qrTakasakishinbo" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <img src="images/qr_shisui.jpg" width="84" height="83" alt="qrShisui" /></div>
+            </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+        $('#modal').bind('click', function(e) {
+            e.preventDefault();
+
+            // Triggering bPopup when click event is fired
+            $('#element_to_pop_up').bPopup();
+        });
+    });
+    </script>
+    <!--/POPUP -->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29774849-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+
+</html>

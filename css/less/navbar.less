@@ -1,0 +1,187 @@
+// Color variables (appears count calculates by raw css)
+@color0: #8fc31f; // Appears 4 times
+@color1: #00a465; // Appears 2 times
+@white: #fff;
+
+// Menu Color 
+@color-concepts: #593D1E;
+@color-services: #C472AC;
+@color-howtos: #A7CF21;
+@color-shops: #FB801A;
+@color-campaign: #FBC122;
+@color-recruitment: #58A2DB;
+@color-faq: #46B9AA;
+@color-aboutus: #E2BD97;
+@color-contactus: #7F7F7F;
+
+
+#J-Quest-Navbar.navbar-default {
+    background-color: @color1;
+    border-bottom: 4px solid @color0;
+    font-size: 14px;
+
+    .navbar-brand {
+        color: @white;
+    }
+    .navbar-nav>li>a {
+        background-color: @color0;
+        color: rgba(230, 230, 230, 1);
+        &:hover {
+            background-color: @color0;
+            background: -webkit-linear-gradient(top, @color1 0%, @color0 100%);
+            background: linear-gradient(to bottom, @color1 0%, @color0 100%);
+            color: @white;
+        }
+        &:focus {
+            background-color: @color0;
+            background: -webkit-linear-gradient(top, @color1 0%, @color0 100%);
+            background: linear-gradient(to bottom, @color1 0%, @color0 100%);
+            color: @white;
+        }
+    }
+    .navbar-nav>.active>a {
+        background-color: @color0;
+        color: @white;
+        &:hover {
+            background-color: @color0;
+            color: @white;
+        }
+        &:focus {
+            background-color: @color0;
+            color: @white;
+        }
+    }
+    .navbar-toggle {
+        border-color: @color0;
+        color: white;
+        &:hover {
+            background-color: @color0;
+            .icon-bar {
+                background-color: white;
+            }
+        }
+        &:focus {
+            background-color: @color0;
+            .icon-bar {
+                background-color: white;
+            }
+        }
+        .icon-bar {
+            background-color: white;
+        }
+    }
+    .navbar-collapse {
+        border: none;
+        max-height: 450px;
+
+        .navbar-nav {
+            /*　リンク色指定 */
+            li {                    
+                a {
+                    text-shadow: 1px 1px 2px black;
+                    font-size: 1.2em;
+                }
+                
+                &:nth-child(1) a {
+                    background: none;
+                    text-align: right;
+                    
+                }
+                &:nth-child(2) a {
+                    background: @color-concepts;
+                }
+                &:nth-child(3) a {
+                    background: @color-services;
+                }
+
+                &:nth-child(4) a {
+                    background: @color-howtos;
+                }
+                &:nth-child(5) a {
+                    background: @color-shops;
+                }
+
+                &:nth-child(6) a {
+                    background: @color-campaign;
+                }
+
+                &:nth-child(7) a {
+                    background: @color-recruitment;
+                }
+
+                &:nth-child(8) a {
+                    background: @color-faq;
+                }
+
+                &:nth-child(9) a {
+                    background: @color-aboutus;
+                }
+
+                &:nth-child(10) a {
+                    background: @color-contactus;
+                }
+            }
+        }
+    }
+}
+
+/* Home page top Block navs */
+#mobile-navbricks .brick-top {
+    background-image: url("../recruit/images/rc08.jpg");
+    background-position: center;
+    height: 12em;
+}
+#mobile-navbricks .nav {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+
+    li {            
+        display: table;              
+        padding: 0;
+        height: 5em;    
+
+        /*　リンク色指定 */        
+        &:nth-child(1) {
+            background: @color-concepts;
+        }
+        &:nth-child(2) {
+            background: @color-services;
+        }
+
+        &:nth-child(3) {
+            background: @color-howtos;
+        }
+        &:nth-child(4) {
+            background: @color-shops;
+        }
+
+        &:nth-child(5) {
+            background: @color-campaign;
+        }
+
+        &:nth-child(6) {
+            background: @color-recruitment;
+        }
+
+        &:nth-child(7) {
+            background: @color-faq;
+        }
+
+        &:nth-child(8) {
+            background: @color-aboutus;
+        }
+
+        &:nth-child(9) {
+            background: @color-contactus;
+        }
+            
+    }
+    a { 
+        display: table-cell;
+        vertical-align: middle;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        padding: 0;     
+    }
+}
