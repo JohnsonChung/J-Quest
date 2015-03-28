@@ -381,6 +381,7 @@ a:hover {
   text-align: left;
 }
 #contents #main .post {
+  margin-bottom: 8px;
   zoom: 1;
 }
 #contents #main .post:before,

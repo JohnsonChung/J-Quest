@@ -8,7 +8,7 @@ $(function() {
     var $main = $('#main');
     var $side = $('#side');
 
-    $.get('js/templates/service.hbs').then(function(data) {    	
+    $.get('js/templates/concept.hbs').then(function(data) {    	
         $main.html(Handlebars.compile(data));
     });
     $.get('js/templates/sideNav.hbs').then(function(data) {    	
