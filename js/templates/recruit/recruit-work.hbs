@@ -1,17 +1,49 @@
 <div class="recruit">
-    <p><a href="#"  onClick="hbs.change('recruit')">採用情報トップ</a>＞<a href="#"  onClick="hbs.change('recruit/recruit-parttimer')">パートタイマースタッフ募集</a>＞どんな仕事なの？</p>
+    <p><a href="#" onClick="hbs.change('recruit')">採用情報トップ</a>＞<a href="#" onClick="hbs.change('recruit/recruit-parttimer')">パートタイマースタッフ募集</a>＞どんな仕事なの？</p>
     <h2>どんな仕事なの？</h2>
-    <img name="pentagon" src="../j-quest/images/arbeit/pentagon.jpg" width="626" height="400" border="0" id="pentagon" usemap="#m_pentagon" alt="" />
-    <map name="m_pentagon" id="m_pentagon">
-        <area shape="rect" coords="438,338,590,373" href="recruitment_voice.html#chief" title="チーフスタッフ" alt="チーフスタッフ" />
-        <area shape="rect" coords="438,298,590,333" href="recruitment_voice.html#gakusei" title="学生編" alt="学生編" />
-        <area shape="rect" coords="438,258,590,293" href="recruitment_voice.html#shufu" title="主婦編" alt="主婦編" />
-        <area shape="poly" coords="58,255,191,255,191,333,58,333,58,255" href="recruitment_work.html#goannnai" title="お客様へのご案内" alt="お客様へのご案内" />
-        <area shape="poly" coords="207,253,326,253,326,333,207,333,207,253" href="recruitment_work.html#omisedukuri" title="お店創りへの参加" alt="お店創りへの参加" />
-        <area shape="poly" coords="262,140,380,140,380,221,262,221,262,140" href="recruitment_work.html#cleanliness" title="クリンリネス" alt="クリンリネス" />
-        <area shape="poly" coords="148,65,264,65,264,128,148,128,148,65" href="recruitment_work.html#omotenashi" alt="おもてなし" title="おもてなし" />
-        <area shape="poly" coords="33,127,152,127,152,207,33,207,33,127" href="recruitment_work.html#counter" title="カウンター業務" alt="カウンター業務" />
-    </map>
+    <!-- smartphone visible nav  -->
+    <div class="row visible-xs">
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-primary" href="#goannai">お客様へのご案内</a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-primary" href="#omisedukuri">お店創りへの参加</a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-primary" href="#cleanliness">クリンリネス</a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-primary" href="#omotenashi">おもてなし</a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-primary" href="#counter">カウンター業務</a>
+        </div>
+    </div>
+    <div class="row visible-xs">
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-success" href="#" onClick="hbs.change('recruit/recruit-voice')">学生編</a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-success" href="#" onClick="hbs.change('recruit/recruit-voice')">主婦編</a>
+        </div>
+        <div class="col-xs-6">
+            <a class="btn btn-block btn-success" href="#" onClick="hbs.change('recruit/recruit-voice')">チーフスタッフ編</a>
+        </div>
+    </div>
+    <!-- normal nav  -->
+    <div class="hidden-xs">
+        <img name="pentagon" src="../j-quest/recruit/images/arbeit/pentagon.jpg" width="626" height="400" border="0" id="pentagon" usemap="#m_pentagon" alt="" />
+        <map name="m_pentagon" id="m_pentagon">
+            <area shape="rect" coords="438,338,590,373" href="recruitment_voice.html#chief" title="チーフスタッフ" alt="チーフスタッフ" />
+            <area shape="rect" coords="438,298,590,333" href="recruitment_voice.html#gakusei" title="学生編" alt="学生編" />
+            <area shape="rect" coords="438,258,590,293" href="recruitment_voice.html#shufu" title="主婦編" alt="主婦編" />
+            <area shape="poly" coords="58,255,191,255,191,333,58,333,58,255" href="recruitment_work.html#goannai" title="お客様へのご案内" alt="お客様へのご案内" />
+            <area shape="poly" coords="207,253,326,253,326,333,207,333,207,253" href="recruitment_work.html#omisedukuri" title="お店創りへの参加" alt="お店創りへの参加" />
+            <area shape="poly" coords="262,140,380,140,380,221,262,221,262,140" href="recruitment_work.html#cleanliness" title="クリンリネス" alt="クリンリネス" />
+            <area shape="poly" coords="148,65,264,65,264,128,148,128,148,65" href="recruitment_work.html#omotenashi" alt="おもてなし" title="おもてなし" />
+            <area shape="poly" coords="33,127,152,127,152,207,33,207,33,127" href="recruitment_work.html#counter" title="カウンター業務" alt="カウンター業務" />
+        </map>
+    </div>
     <img src="../j-quest/images/bl.gif" alt="" height="10" class="clear" />
     <p class="work_title"><a name="omotenashi">最高のおもてなし</a></p>
     <p>J-Questであなたにしていただきたい仕事はお客様への「最高のおもてなし」。 「どうしたらお客様に喜んでいただけるか？」を考えてお客様と接することで、お客様に「またJ-Questに来たいな！」と思っていただくことがあなたの役目です！ お客様一人一人「いいね」と思ってくれることは違います。あなたがお客様と接する中で、そのお客様にとっての「最高のおもてなし」を実践してください♪
@@ -40,8 +72,8 @@
         </p>
         <img src="../j-quest/images/bl.gif" alt="" height="40" class="clear" />
         <div align="center">
-            <p class="btn">
-                <a href="#"  onClick="hbs.change('recruit/recruit-pts')">応募はこちらから</a></p>
+            <p class="btn-danger btn">
+                <a href="#" onClick="hbs.change('recruit/recruit-pts')">応募はこちらから</a></p>
         </div>
-        <p><ahref="#"  onClick="hbs.change('recruit')">採用情報トップ</a>＞<a href="#"  onClick="hbs.change('recruit/recruit-parttimer')">パートタイマースタッフ募集</a>＞どんな仕事なの？</p>
+        <img src="../j-quest/images/bl.gif" alt="" height="40" class="clear" />
 </div>

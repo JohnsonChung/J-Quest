@@ -27,7 +27,7 @@ $(function() {
     var $main = $('#main');
     var $side = $('#side');
 
-    $.get('js/templates/recruit/recruit-manager.hbs').then(function(data) {
+    $.get('js/templates/recruit/recruit-parttimer.hbs').then(function(data) {
         $main.html(Handlebars.compile(data));
     });
     $.get('js/templates/sideNav.hbs').then(function(data) {

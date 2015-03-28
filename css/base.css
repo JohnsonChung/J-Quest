@@ -304,18 +304,6 @@ h3 {
   padding-bottom: 2px;
   padding-left: 10px;
 }
-a:link {
-  border: 0;
-  color: #00a465;
-}
-a:visited {
-  border: 0;
-  color: #00a465;
-}
-a:hover {
-  border: 0;
-  color: #333333;
-}
 ul {
   padding: 0;
 }
@@ -550,6 +538,10 @@ ul {
 }
 .text-center .thumbnail {
   display: inline-block;
+}
+/* ボタン */
+.btn-block {
+  margin-bottom: 12px;
 }
 /*灰*/
 .xl_bk {
@@ -1026,25 +1018,6 @@ table.map td.address {
 }
 .recruit .col-sm-6 {
   padding: 0 15px 15px 15px;
-}
-.recruit .btn {
-  -webkit-border-radius: 7px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 7px;
-  -moz-background-clip: padding;
-  border-radius: 7px;
-  background-clip: padding-box;
-  background-color: #910000;
-  background: url(../images/gra_re.jpg) repeat-x;
-  border: 1px #910000 solid;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 1.2em;
-  height: 20px;
-  margin: 15px 0;
-  padding: 3px 20px;
-  text-align: center;
-  width: 140px;
 }
 .recruit .btn2 {
   -webkit-border-radius: 7px;
