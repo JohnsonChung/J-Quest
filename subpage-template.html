@@ -74,6 +74,11 @@
                     that.collapse('hide');
                 }, 200)
             })
+            $('.navbar-header').on('click', function(){
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500);
+            })
             </script>
         </div>
     </div>

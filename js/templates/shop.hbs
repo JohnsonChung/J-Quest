@@ -23,7 +23,7 @@
         <area shape="rect" coords="352,524,404,540" href="#hyogo" alt="兵庫県">
         <area shape="rect" coords="412,499,466,517" href="#kyoto" alt="京都府">
     </map>
-    <div id="nav-area" class="row text-center visible-xs">
+    <div id="nav-area" class="row text-center visible-xs nav-sub">
         <div class="col-xs-12">
             <div class="row">
                 <!-- 北海道 -->
@@ -61,6 +61,16 @@
                 <div class="col-xs-4"><a class="btn btn-default" href="#kyoto">京都府</a></div>
             </div>
         </div>
+        <script>
+        $(function() {            
+            $(".nav-sub a").on( "click" ,function() {
+                var offsetTop = $(this).attr("href");
+                $('html, body').animate({
+                    scrollTop: $(offsetTop).offset().top - 100
+                }, 500);
+            });
+        })
+        </script>
     </div>
     <!--/地図-->
     <!--地区別リスト-->
