@@ -19,6 +19,7 @@
     "lesshat": "~3.0.2",
     "normalize.css": "~3.0.2",
     "handlebars": "~3.0.0",
-    "ember": "~1.10.0"
+    "ember": "~1.10.0",
+    "flickity": "~1.0.0"
   }
 }

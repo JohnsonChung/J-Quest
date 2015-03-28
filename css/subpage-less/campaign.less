@@ -1,6 +1,8 @@
 /*キャンペーン情報*/
 .campaign {
   text-align: left;
+  line-height: 1.6;
+
   h2 {
     .panel-default;
     background: url(../images/gra_yl.jpg) repeat-x;
@@ -27,17 +29,33 @@
     padding-left: 10px;
   }
   h4 {
-    background-color: #E0E2C2;
-    background-repeat: repeat-x;
-    border-bottom: 1px @color6 solid;
-    border-left: 6px @color6 solid;
-    color: @color3;
-    font-size: 1.0em;
-    font-weight: normal;
-    line-height: 27px;
-    margin-bottom: 15px;
-    padding-bottom: 2px;
-    padding-left: 10px;
+    // background-color: #E0E2C2;
+    // background-repeat: repeat-x;
+    // border-bottom: 1px @color6 solid;
+    // border-left: 6px @color6 solid;
+    // color: @color3;
+    // font-size: 1.0em;
+    // font-weight: normal;
+    // line-height: 27px;
+    // margin-bottom: 15px;
+    // padding-bottom: 2px;
+    // padding-left: 10px;
+    position: relative;
+    font-size: 1.1em;
+    line-height: 1.4; 
+    padding-left: 1.5em;    
+      
+    &:before {
+      position: absolute;
+      left: 0; top: 0;
+      content: '■';    
+    }
+  }
+  .post {
+    margin-bottom: 25px;
+    p {
+      padding-left: 1.5em;
+    }
   }
 }
 .campaign_banner {

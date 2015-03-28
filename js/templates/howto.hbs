@@ -4,12 +4,129 @@
     <img src="images/bl.gif" alt="" height="10" class="clear" />
     <h3><a name="kyuuyu" id="kyuuyu"></a>ご給油からご精算まで</h3>
     <!--スライダー-->
-    <iframe width="650" height="530" frameborder="0" scrolling="0" marginheight="0" marginwidth="0" title="給油からご精算までムービー" src="howto/kyuyu.html"></iframe>
+    <style>
+    .gallery-main {
+        padding-bottom: 68%;
+        width: 100%;
+        margin-bottom: 45px;
+    }
+    
+    .gallery-main img {
+        width: 100%;
+    }
+    
+    .gallery-main .flickity-viewport {
+        position: absolute;
+        width: 100%;
+    }
+    
+    .gallery-main .gallery-cell {
+        height: 102%;
+        width: 100%;
+    }
+    
+    .gallery-nav img {
+        width: 100px;
+    }
+    
+    .gallery-nav .gallery-cell.is-nav-selected {
+        border-bottom: 6px solid white;
+        margin-top: -6px;
+    }
+    
+    #gallery-sensha .flickity-page-dots .dot {
+        margin: 0px 2px;
+    }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $('#gallery-cicle, #gallery-sensha').flickity();
+        $('#gallery-sensha-nav').flickity({
+            "asNavFor": "#gallery-sensha",
+            "contain": true,
+            "pageDots": false,
+            "prevNextButtons": false
+        });
+        $('#gallery-cicle-nav').flickity({
+            "asNavFor": "#gallery-cicle",
+            "contain": true,
+            "pageDots": false,
+            "prevNextButtons": false
+        });
+    });
+    </script>
+    <div id="gallery-cicle" class="gallery gallery-main js-flickity" data-flickity-options='{}'>
+        <!--  Emmet  .gallery-cell*8>img[src="../j-quest/howto/images/cicle$$.jpg"] -->
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle00.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle01.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle02.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle03.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle04.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle05.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle06.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle07.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle08.jpg" alt=""></div>
+    </div>
+    <div id="gallery-cicle-nav" class="gallery gallery-nav js-flickity">
+        <!--  Emmet  .gallery-cell*8>img[src="../j-quest/howto/images/cicle$$.jpg"] -->
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle00.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle01.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle02.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle03.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle04.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle05.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle06.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle07.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/cicle08.jpg" alt=""></div>
+    </div>
+    <!-- <iframe width="650" height="530" frameborder="0" scrolling="0" marginheight="0" marginwidth="0" title="給油からご精算までムービー" src="howto/kyuyu.html"></iframe> -->
     <!--/スライダー-->
     <img src="images/bl.gif" alt="" height="10" class="clear" />
     <h3><a name="sensha" id="sensha"></a>洗車</h3>
     <!--スライダー-->
-    <iframe width="650" height="530" frameborder="0" scrolling="0" marginheight="0" marginwidth="0" title="洗車ムービー" src="howto/sensha.html"></iframe>
+    <div id="gallery-sensha" class="gallery gallery-main js-flickity">
+        <!--  Emmet  .gallery-cell*17>img[src="../j-quest/howto/images/sensha$$.jpg"] -->
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha00.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha01.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha02.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha03.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha04.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha05.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha06.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha07.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha08.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha09.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha10.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha11.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha12.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha13.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha14.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha15.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha16.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha17.jpg" alt=""></div>
+    </div>
+    <div id="gallery-sensha-nav" class="gallery gallery-nav js-flickity">
+        <!--  Emmet  .gallery-cell*8>img[src="../j-quest/howto/images/cicle$$.jpg"] -->
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha00.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha01.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha02.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha03.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha04.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha05.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha06.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha07.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha08.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha09.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha10.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha11.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha12.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha13.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha14.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha15.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha16.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="../j-quest/howto/images/sensha17.jpg" alt=""></div>
+    </div>
+    <!-- <iframe width="650" height="530" frameborder="0" scrolling="0" marginheight="0" marginwidth="0" title="洗車ムービー" src="howto/sensha.html"></iframe> -->
     <!--/スライダー-->
     <img src="images/bl.gif" alt="" height="10" class="clear" />
 </div>

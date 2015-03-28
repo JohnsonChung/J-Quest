@@ -2,8 +2,8 @@
     <h2>店舗情報</h2>
     <br />
     <!--地図-->
-    <img src="images/map.jpg" alt="" usemap="#map" />
-    <map name="map">
+    <img src="images/map.jpg" alt="" usemap="#map" class="hidden-xs" />
+    <map name="map" class="hidden-xs">
         <area shape="rect" coords="545,50,598,66" href="#hokkaido" alt="北海道">
         <area shape="rect" coords="537,281,590,298" href="#miyagi" alt="宮城県">
         <area shape="rect" coords="500,372,551,392" href="#ibaraki" alt="茨城県">
@@ -23,6 +23,45 @@
         <area shape="rect" coords="352,524,404,540" href="#hyogo" alt="兵庫県">
         <area shape="rect" coords="412,499,466,517" href="#kyoto" alt="京都府">
     </map>
+    <div id="nav-area" class="row text-center visible-xs">
+        <div class="col-xs-12">
+            <div class="row">
+                <!-- 北海道 -->
+                <div class="col-xs-12">北海道、東北地方</div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#hokkaido">北海道</a></div>
+                <!-- 東北  -->
+                <div class="col-xs-4"><a class="btn btn-default" href="#miyagi">宮城県</a></div>
+            </div>
+            <div class="row">
+                <!-- 関東  -->
+                <div class="col-xs-12">関東地方</div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#ibaraki">茨城県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#tochigi">栃木県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#gunma">群馬県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#saitama">埼玉県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#chiba">千葉県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#tokyo">東京都</a></div>
+            </div>
+            <div class="row">
+                <!-- 中部　 -->
+                <div class="col-xs-12">中部地方</div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#niigata">新潟県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#toyama">富山県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#nagano">長野県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#shizuoka">静岡</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#gifu">岐阜県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#mie">三重県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#aichi">愛知県</a></div>
+            </div>
+            <div class="row">
+                <!-- 近畿　 -->
+                <div class="col-xs-12">近畿地方</div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#shiga">滋賀県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#hyogo">兵庫県</a></div>
+                <div class="col-xs-4"><a class="btn btn-default" href="#kyoto">京都府</a></div>
+            </div>
+        </div>
+    </div>
     <!--/地図-->
     <!--地区別リスト-->
     <h3>北海道地区</h3>
