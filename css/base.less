@@ -6,6 +6,7 @@
 @import '../css/less/mixin.less';
 @import '../css/less/navbar.less';
 @import '../css/less/media-query.less';
+@import '../css/subpage-less/sideNav.less';
 
 
 /* LESS Document */
@@ -174,19 +175,21 @@ ul {
 #side {  
   background-color: @color0;
   color: @color1;
-  font-size: 0.9em;
+  // font-size: 0.9em;
   // width: @width21;
   ul {
-    line-height: 0;
+    // line-height: 0;
     margin: 15px 0;
   }
-  li {
+  li {    
     list-style-type: none;
     margin-bottom: 15px;
-    padding-left: 0;
-    img {
+    padding-bottom: 0;
+    // padding-left: 0;
+    a {
       .panel-default;
-    }
+      display: inline-block;
+    }    
   }
 }
 #footer-nav {
@@ -345,6 +348,13 @@ ul {
 /* ボタン */
 .btn-block {
   margin-bottom: 12px;
+}
+/* ブレッドクラム */
+ul.breadcrumbs {
+  li {
+    display: inline;
+    margin: 0;
+  }
 }
 /*灰*/
 .xl_bk {
