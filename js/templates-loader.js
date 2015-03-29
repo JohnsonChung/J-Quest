@@ -58,7 +58,7 @@ $(function() {
                 var parts = target.split('/');
                 var body = parts[0];
                 var partial = parts[parts.length - 1];
-                template = Handlebars.compile(this.cache[target]);
+                template = Handlebars.compile(this.cache[body]);
                 Handlebars.registerPartial("partial", this.cache[body + '/' + partial]);
 
                 console.log('已讀取次級樣板 [' + partial + "].");
@@ -66,8 +66,9 @@ $(function() {
             } else {
                 // 檢查有沒有次級樣板 (例如： templates/recruit/recruit-index.hsb )
                 if (this.cache[target+'/'+target+'-index']) {
-                    console.log('發現目標有次級樣板...');                    
-                    template = Handlebars.compile(this.cache[target+'/'+target+'-index']);
+                    console.log('發現目標有次級樣板...');       
+                    template = Handlebars.compile(this.cache[target]);
+                    Handlebars.registerPartial("partial", this.cache[target+'/'+target+'-index']);
                     console.log('已讀取次級樣板 ['+target+ '-index]');
                 } 
                 // 讀取一般樣板 ( 例如： about.hsb )
