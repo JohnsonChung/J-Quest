@@ -85,7 +85,6 @@ $(function() {
 
     window.hbs = hbs;
     hbs.initialize();
-
     // 讀取左方瀏覽列表
     $.get('js/templates/sideNav.hbs').then(function(data) {
         $side.html(Handlebars.compile(data));
