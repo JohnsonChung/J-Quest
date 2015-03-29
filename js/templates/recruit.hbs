@@ -3,26 +3,11 @@
     <script>
     Handlebars.registerHelper('breadcrumbs', function(options) {        
         return new Handlebars.SafeString(
-        '<li><a href="#" onClick(hbs("recruit"))>採用情報トップ</a></li>' + "<li><span>&nbsp>&nbsp</span></li>" + '<li>採用情報トップ</li>');
+        '<li><a href="#">採用情報トップ</a></li>' + "<li><span>&nbsp>&nbsp</span></li>" + '<li>採用情報トップ</li>');
     });
     </script>
     <ul class="breadcrumbs">
         {{#breadcrumbs}} {{breadcrumbs}} {{/breadcrumbs}}
-        <!--       
-            <li><a href="#" onClick="hbs.change('recruit')">採用情報トップ</a></li>
-            <li>＞</li>
-            <li><a href="#" onClick="hbs.change('recruit/recruit-parttimer')">パートタイマースタッフ募集</a> </li>
-            <li>＞</li>
-            <li>{{TITLE}}</li> 
-        -->
     </ul>
     <div>{{> partial }}</div>
-    <!-- 
-        <div class="row text-center">
-            <div class="col-xs-12">
-                <a href="#" onClick="hbs.change('recruit/recruit-pts')" class="btn-danger btn">応募はこちらから</a>
-            </div>
-        </div>     
-    -->
-    <p>recruit/template</p>
 </div>
