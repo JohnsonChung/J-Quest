@@ -152,16 +152,16 @@ ul {
   // margin: -15px auto;
   // width: @width19;
 }
-.contents {
-  .panel-default;
+// .contents {
+  // .panel-default;
   // margin: 0 auto;
   // overflow: hidden;
   // padding: 0;
   // width: @width19;
-  background-color: @color0;
-  border:1px @color2 solid;  
-  text-align: center;  
-}
+  // background-color: @color0;
+  // border:1px @color2 solid;  
+  // text-align: center;  
+// }
 #main {
   color: @color1;
   text-align: center;
@@ -193,25 +193,33 @@ ul {
   }
 }
 #footer-nav {
-  // clear: both;
-  .clearfix;
   margin: 15px auto;
-  // width: @width19;
-  .nav-left {
-    float: left;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    // width: 65px;
+  
+  .clearfix;
+  .logo-enenos {
+    margin: 0 10px 0 0;
   }
-  .nav-right {
-    color: @color1;
-    float: right;
-    font-size: 1em;
-    line-height: 150%;
-    padding-top: 0.75em;
-    text-align: left;
-    // width: 820px;
+  .nav {
+    height: 65px;
+    margin-top: 8px;
   }
+  ul {
+    list-style: none;    
+    
+    li {
+      display: inline;
+      &:after {
+        content: "｜";
+      }
+      &:last-child:after {
+        content: "";
+      }
+      a {
+
+      }
+    }
+  }
+  
 }
 #town {
   background: url(../images/town.png) repeat-x;

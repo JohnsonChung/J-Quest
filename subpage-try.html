@@ -18,7 +18,8 @@
     <link rel="contents" href="index.html" title="ホーム" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />    
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- javascript -->
     <!--[if !IE]><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <!--<![endif]-->
@@ -33,14 +34,14 @@
     <![endif]-->
     <!--[if gt IE 8]>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <![endif]-->    
+    <![endif]-->
+    
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <!-- handlebars -->
     <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
     <!-- <script type="text/javascript" src="js/templates-loader.js"></script> -->
-    <!-- bootstrap -->    
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- flickity -->
     <link rel="stylesheet" media="screen" href="bower_components/flickity/css/flickity.css">
     <script type="text/javascript" src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
@@ -73,12 +74,64 @@
             <div class="row row-panel">
                 <div class="col-panel col-md-3 hidden-sm hidden-xs">
                     <!--side-->
-                    <div id="side"></div>
+                    <div id="side">
+                        <ul class="side-nav">
+                            <li>
+                                <a id="side-nav-index" href="index.html" alt="トップページ" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-concept" class="active" href="#" onClick="hbs.change('concept')" alt="企業コンセプト" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-service" href="#" onClick="hbs.change('service')" alt="商品・サービス" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-howto" href="#" onClick="hbs.change('howto')" alt="ご利用方法" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-shop" href="#" onClick="hbs.change('shop')" alt="店舗情報" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-campaign" href="#" onClick="hbs.change('campaign')" alt="キャンペーン情報" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-recruit" href="#" onClick="hbs.change('recruit')" alt="採用情報" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-faq" href="#" onClick="hbs.change('faq')" alt="Q &amp; A" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-about" href="#" onClick="hbs.change('about')" alt="企業情報" /> </a>
+                            </li>
+                            <li>
+                                <a id="side-nav-contact" href="#" onClick="hbs.change('contact')" alt="お問合せ" /> </a>
+                            </li>
+                        </ul>
+                    </div>
                     <!--/side-->
                 </div>
                 <div class="col-panel col-md-9 col-sm-12 col-xs-12">
                     <!--main-->
-                    <div id="main"></div>
+                    <div id="main">
+                        <div class="concept">
+                            <h2>J-Questのミッション（使命）ポリシー</h2>
+                            <h3>私たちの使命は、お客様にとって無くてはならない存在になることです</h3>
+                            <p class="title">-OUR MISSION IS TO BE "IRREPLACEABLE" TO OUR CUSTOMERS-</p>
+                            <p class="box1">J-Questは創業以来、私たちのサービスを通じて、お客様に高い満足を感じていただき『なくてはならない存在』となることを使命としています。私たちの使命の判定役はまぎれもなくお客様です。そのお客様にとってかけがえのない存在となるために、J-Questは常にお客様を中心に置いて経営します。</p>
+                            <img src="images/bl.gif" alt="" height="40" class="clear" />
+                            <h2>J-Questのポリシー</h2>
+                            <h3>お客様から期待された以上の価値を提供することを探求（=Quest）します</h3>
+                            <p>私たちのお店でお客様が、今まで他のガソリンスタンドでは体験したことがないような満足感*思っていた以上の価値を感じる体験をしていただけるよう、お客様が滞在する間の居心地の良さを提供して参ります。</p>
+                            <img src="images/bl.gif" alt="" height="10" class="clear" />
+                            <h4>そのために大切にしている方針</h4>
+                            <ul>
+                                <li>常にお客様の声に耳を傾けます</li>
+                                <li>既存のカタチにとらわれずに、お客様の利便性と居心地を追求した独自のお店づくりとサービスを提供します</li>
+                                <li>お客様と接する全てのスタッフは、お客様の立場に立った対応をします</li>
+                                <li>お客様の安全については、言うまでもなく当然のサービスとして配慮を怠りません</li>
+                            </ul>
+                        </div>
+                    </div>
                     <!--/main-->
                 </div>
             </div>

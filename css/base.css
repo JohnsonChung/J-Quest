@@ -415,20 +415,6 @@ ul {
   box-shadow: 0 0 5px rgba(0,0,0,.50);
   margin-bottom: 15px;
 }
-.contents {
-  -webkit-border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
-  -moz-background-clip: padding;
-  border-radius: 5px;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.50);
-  -moz-box-shadow: 0 0 5px rgba(0,0,0,.50);
-  box-shadow: 0 0 5px rgba(0,0,0,.50);
-  background-color: #ffffff;
-  border: 1px #dbdbdb solid;
-  text-align: center;
-}
 #main {
   color: #333333;
   text-align: center;
@@ -465,8 +451,8 @@ ul {
   display: block;
 }
 #footer-nav {
-  zoom: 1;
   margin: 15px auto;
+  zoom: 1;
 }
 #footer-nav:before,
 #footer-nav:after {
@@ -476,18 +462,24 @@ ul {
 #footer-nav:after {
   clear: both;
 }
-#footer-nav .nav-left {
-  float: left;
-  padding-bottom: 15px;
-  padding-right: 15px;
+#footer-nav .logo-enenos {
+  margin: 0 10px 0 0;
 }
-#footer-nav .nav-right {
-  color: #333333;
-  float: right;
-  font-size: 1em;
-  line-height: 150%;
-  padding-top: 0.75em;
-  text-align: left;
+#footer-nav .nav {
+  height: 65px;
+  margin-top: 8px;
+}
+#footer-nav ul {
+  list-style: none;
+}
+#footer-nav ul li {
+  display: inline;
+}
+#footer-nav ul li:after {
+  content: "｜";
+}
+#footer-nav ul li:last-child:after {
+  content: "";
 }
 #town {
   background: url(../images/town.png) repeat-x;
