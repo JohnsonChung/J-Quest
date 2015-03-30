@@ -20,7 +20,7 @@
     // Loop
     .loop_out (@i) when (@i > 0) {
         li:nth-child(@{i}) a {
-            background: url('../images/b_@{navName@{i}}_out.png') no-repeat;
+            .background-image( url('../images/b_@{navName@{i}}_out.png'));
         }
         .loop_out(@i - 1);
     }
@@ -29,7 +29,7 @@
     // Loop
     .loop_over (@i) when (@i > 0) {
         li:nth-child(@{i}) a.active {
-            background: url('../images/b_@{navName@{i}}_over.png') no-repeat;
+            .background-image( url('../images/b_@{navName@{i}}_over.png'));
         }
         .loop_over(@i - 1);
     }

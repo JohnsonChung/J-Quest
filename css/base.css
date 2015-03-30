@@ -255,64 +255,64 @@
   height: 40px;
 }
 .side-nav li:nth-child( 10) a {
-  background: url('../images/b_contact_out.png') no-repeat;
+  background-image: url('../images/b_contact_out.png');
 }
 .side-nav li:nth-child( 9) a {
-  background: url('../images/b_about_out.png') no-repeat;
+  background-image: url('../images/b_about_out.png');
 }
 .side-nav li:nth-child( 8) a {
-  background: url('../images/b_faq_out.png') no-repeat;
+  background-image: url('../images/b_faq_out.png');
 }
 .side-nav li:nth-child( 7) a {
-  background: url('../images/b_recruit_out.png') no-repeat;
+  background-image: url('../images/b_recruit_out.png');
 }
 .side-nav li:nth-child( 6) a {
-  background: url('../images/b_campaign_out.png') no-repeat;
+  background-image: url('../images/b_campaign_out.png');
 }
 .side-nav li:nth-child( 5) a {
-  background: url('../images/b_shop_out.png') no-repeat;
+  background-image: url('../images/b_shop_out.png');
 }
 .side-nav li:nth-child( 4) a {
-  background: url('../images/b_howto_out.png') no-repeat;
+  background-image: url('../images/b_howto_out.png');
 }
 .side-nav li:nth-child( 3) a {
-  background: url('../images/b_service_out.png') no-repeat;
+  background-image: url('../images/b_service_out.png');
 }
 .side-nav li:nth-child( 2) a {
-  background: url('../images/b_concept_out.png') no-repeat;
+  background-image: url('../images/b_concept_out.png');
 }
 .side-nav li:nth-child( 1) a {
-  background: url('../images/b_home_out.png') no-repeat;
+  background-image: url('../images/b_home_out.png');
 }
 .side-nav li:nth-child( 10) a.active {
-  background: url('../images/b_contact_over.png') no-repeat;
+  background-image: url('../images/b_contact_over.png');
 }
 .side-nav li:nth-child( 9) a.active {
-  background: url('../images/b_about_over.png') no-repeat;
+  background-image: url('../images/b_about_over.png');
 }
 .side-nav li:nth-child( 8) a.active {
-  background: url('../images/b_faq_over.png') no-repeat;
+  background-image: url('../images/b_faq_over.png');
 }
 .side-nav li:nth-child( 7) a.active {
-  background: url('../images/b_recruit_over.png') no-repeat;
+  background-image: url('../images/b_recruit_over.png');
 }
 .side-nav li:nth-child( 6) a.active {
-  background: url('../images/b_campaign_over.png') no-repeat;
+  background-image: url('../images/b_campaign_over.png');
 }
 .side-nav li:nth-child( 5) a.active {
-  background: url('../images/b_shop_over.png') no-repeat;
+  background-image: url('../images/b_shop_over.png');
 }
 .side-nav li:nth-child( 4) a.active {
-  background: url('../images/b_howto_over.png') no-repeat;
+  background-image: url('../images/b_howto_over.png');
 }
 .side-nav li:nth-child( 3) a.active {
-  background: url('../images/b_service_over.png') no-repeat;
+  background-image: url('../images/b_service_over.png');
 }
 .side-nav li:nth-child( 2) a.active {
-  background: url('../images/b_concept_over.png') no-repeat;
+  background-image: url('../images/b_concept_over.png');
 }
 .side-nav li:nth-child( 1) a.active {
-  background: url('../images/b_home_over.png') no-repeat;
+  background-image: url('../images/b_home_over.png');
 }
 /* LESS Document */
 /* ============ベース指定 ================= */
