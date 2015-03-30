@@ -85,6 +85,11 @@ $(function() {
 
     window.hbs = hbs;
     hbs.initialize();
+
+    // 讀取左方瀏覽列表
+    $.get('js/templates/contact.hbs').then(function(data) {
+        $main.html(Handlebars.compile(data));
+    });
     // 讀取左方瀏覽列表
     $.get('js/templates/sideNav.hbs').then(function(data) {
         $side.html(Handlebars.compile(data));

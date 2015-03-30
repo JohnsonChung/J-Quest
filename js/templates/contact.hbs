@@ -2,243 +2,241 @@
     <h2>お問合せ</h2>
     <p>弊社へのご意見・お問合せは、下記ご入力の上「送信」ボタンをクリックしてください。
         <br />（<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）</p>
-    <table class="form" summary="入力フォーム">
-        <form id="mailform" method="post" action="mailform/send.cgi" onsubmit="return sendmail(this);">
-            <tbody>
-                <tr>
-                    <td class="title">ご利用店舗</td>
-                    <td class="about">
-                        <select name="ご利用店舗" id="ご利用店舗">
-                            <option value="">選択してください</option>
-                            <OPTGROUP label=北海道>
-                                <option value="北海道 大曲店">大曲店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=宮城県>
-                                <option value="宮城県 名取店">名取店</option>
-                                <option value="宮城県 富谷店">仙台富谷店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=茨城県>
-                                <option value="茨城県 北茨城店">北茨城店</option>
-                                <option value="茨城県 岩瀬店">岩瀬店</option>
-                                <option value="茨城県 玉造店">玉造店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=栃木県>
-                                <option value="栃木県 今市店">今市店</option>
-                                <option value="栃木県 真岡店">真岡店</option>
-                                <option value="栃木県 大田原店">大田原店</option>
-                                <option value="栃木県 アクロスプラザ西那須野店">アクロスプラザ西那須野店</option>
-                                <option value="栃木県 黒磯店">黒磯店</option>
-                                <option value="栃木県 西那須野店">西那須野店</option>
-                                <option value="栃木県 益子店">益子店</option>
-                                <option value="栃木県 大平店">大平店</option>
-                                <option value="栃木県 さくら氏家店">さくら氏家店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=群馬県>
-                                <option value="群馬県 前橋店">前橋店</option>
-                                <option value="群馬県 前橋みなみ店">前橋みなみ店</option>
-                                <option value="群馬県 宮子カインズ前店">宮子カインズ前店</option>
-                                <option value="群馬県 赤堀店">赤堀店</option>
-                                <option value="群馬県 佐波東店">佐波東店</option>
-                                <option value="群馬県 宮子ベイシア前店">宮子ベイシア前店</option>
-                                <option value="群馬県 尾島店">尾島店</option>
-                                <option value="群馬県 沼田店">沼田店</option>
-                                <option value="群馬県 渋川店">渋川店</option>
-                                <option value="群馬県 鯉沢店">鯉沢店</option>
-                                <option value="群馬県 富岡店">富岡店</option>
-                                <option value="群馬県 富士見店">富士見店</option>
-                                <option value="群馬県 吉井店">吉井店</option>
-                                <option value="群馬県 甘楽店">甘楽店</option>
-                                <option value="群馬県 月夜野店">月夜野店</option>
-                                <option value="群馬県 大泉店">大泉店</option>
-                                <option value="群馬県 高崎新保店">高崎新保店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=埼玉県>
-                                <option value="埼玉県 行田店">行田店</option>
-                                <option value="埼玉県 川本店">川本店</option>
-                                <option value="埼玉県 鶴ヶ島店">鶴ヶ島店</option>
-                                <option value="埼玉県 滑川店">滑川店</option>
-                                <option value="埼玉県 嵐山店">嵐山店</option>
-                                <option value="埼玉県 川島店">川島店</option>
-                                <option value="埼玉県 栗橋店">栗橋店</option>
-                                <option value="埼玉県 大利根店">大利根店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=千葉県>
-                                <option value="千葉県 ちば古市場店">ちば古市場店</option>
-                                <option value="千葉県 銚子店">銚子店</option>
-                                <option value="千葉県 佐倉店">佐倉店</option>
-                                <option value="千葉県 鴨川店">鴨川店</option>
-                                <option value="千葉県 富津店">富津店</option>
-                                <option value="千葉県 八日市場店">八日市場店</option>
-                                <option value="千葉県 大原店">大原店</option>
-                                <option value="千葉県 小見川店">小見川店</option>
-                                <option value="千葉県 大網白里店">大網白里店</option>
-                                <option value="千葉県 長生店">長生店</option>
-                                <option value="千葉県 市原五井店">市原五井店</option>
-                                <option value="千葉県 酒々井店">酒々井店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=東京都>
-                                <option value="東京都 町田店">町田店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=新潟県>
-                                <option value="新潟県 豊栄店">豊栄店</option>
-                                <option value="新潟県 新津店">新津店</option>
-                                <option value="新潟県 長岡店">長岡店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=富山県>
-                                <option value="富山県 大沢野店">大沢野店</option>
-                                <option value="富山県 高岡中曽根店">高岡中曽根店</option>
-                                <option value="富山県 黒部店">黒部店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=長野県>
-                                <option value="長野県 小諸店">小諸店</option>
-                                <option value="長野県 大町店">大町店</option>
-                                <option value="長野県 飯山店">飯山店</option>
-                                <option value="長野県 佐久平店">佐久平店</option>
-                                <option value="長野県 堀金店">堀金店</option>
-                                <option value="長野県 豊科店">豊科店</option>
-                                <option value="長野県 中野小布施店">中野小布施店</option>
-                                <option value="長野県 長野稲田店">長野稲田店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=岐阜県>
-                                <option value="岐阜県 関店">関店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=静岡県>
-                                <option value="静岡県 浜松雄踏店">浜松雄踏店</option>
-                                <option value="静岡県 浜松都田店">浜松都田店</option>
-                                <option value="静岡県 大東店">大東店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=愛知県>
-                                <option value="愛知県 蒲郡店">蒲郡店</option>
-                                <option value="愛知県 常滑店">常滑店</option>
-                                <option value="愛知県 三好店">三好店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=三重県>
-                                <option value="三重県 桑名店">桑名店</option>
-                                <option value="三重県 みえ川越店">みえ川越店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=滋賀県>
-                                <option value="滋賀県 彦根店">彦根店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=京都府>
-                                <option value="京都府 綾部店">綾部店</option>
-                                <option value="京都府 木津川店">木津川店</option>
-                            </OPTGROUP>
-                            <OPTGROUP label=兵庫県>
-                                <option value="兵庫県 篠山店">篠山店</option>
-                                <option value="兵庫県 氷上店">氷上店</option>
-                            </OPTGROUP>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">ご意見・お問い合わせ<span style="color:#cc0000;">※</span>
-                        <br />（全角300字程度）</td>
-                    <td class="about">
-                        <textarea name="お問合せ内容" class="zenkaku" rows="10" width="100%"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">お名前(全角)</td>
-                    <td class="about">
-                        <input type="text" name="名前" size="30" value="">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">郵便番号（半角）</td>
-                    <td class="about">
-                        <input type="text" name="郵便番号" class="hankaku" size="9" maxlength="9"> &nbsp;(例:100-0000)
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">ご住所(都道府県名)</td>
-                    <td class="about">
-                        <select name="都道府県">
-                            <option value="">選択してください</option>
-                            <option value="北海道">北海道</option>
-                            <option value="青森県">青森県</option>
-                            <option value="岩手県">岩手県</option>
-                            <option value="宮城県">宮城県</option>
-                            <option value="秋田県">秋田県</option>
-                            <option value="山形県">山形県</option>
-                            <option value="福島県">福島県</option>
-                            <option value="茨城県">茨城県</option>
-                            <option value="栃木県">栃木県</option>
-                            <option value="群馬県">群馬県</option>
-                            <option value="埼玉県">埼玉県</option>
-                            <option value="千葉県">千葉県</option>
-                            <option value="東京都">東京都</option>
-                            <option value="神奈川県">神奈川県</option>
-                            <option value="新潟県">新潟県</option>
-                            <option value="富山県">富山県</option>
-                            <option value="石川県">石川県</option>
-                            <option value="福井県">福井県</option>
-                            <option value="山梨県">山梨県</option>
-                            <option value="長野県">長野県</option>
-                            <option value="岐阜県">岐阜県</option>
-                            <option value="静岡県">静岡県</option>
-                            <option value="愛知県">愛知県</option>
-                            <option value="三重県">三重県</option>
-                            <option value="滋賀県">滋賀県</option>
-                            <option value="京都府">京都府</option>
-                            <option value="大阪府">大阪府</option>
-                            <option value="兵庫県">兵庫県</option>
-                            <option value="奈良県">奈良県</option>
-                            <option value="和歌山県">和歌山県</option>
-                            <option value="鳥取県">鳥取県</option>
-                            <option value="島根県">島根県</option>
-                            <option value="岡山県">岡山県</option>
-                            <option value="広島県">広島県</option>
-                            <option value="山口県">山口県</option>
-                            <option value="徳島県">徳島県</option>
-                            <option value="香川県">香川県</option>
-                            <option value="愛媛県">愛媛県</option>
-                            <option value="高知県">高知県</option>
-                            <option value="福岡県">福岡県</option>
-                            <option value="佐賀県">佐賀県</option>
-                            <option value="長崎県">長崎県</option>
-                            <option value="熊本県">熊本県</option>
-                            <option value="大分県">大分県</option>
-                            <option value="宮崎県">宮崎県</option>
-                            <option value="鹿児島県">鹿児島県</option>
-                            <option value="沖縄県">沖縄県</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">市区郡町番地(全角)</td>
-                    <td class="about">
-                        <input type="text" name="市区郡町番地" class="zenkaku" size="70" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">建物名（全角）</td>
-                    <td class="about">
-                        <input type="text" name="建物名" class="zenkaku" size="70" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">電話番号（半角）</td>
-                    <td class="about">
-                        <input type="text" name="電話" class="hankaku" size="12"> &nbsp;(例:03-1000-0000)
-                    </td>
-                </tr>
-                <tr>
-                    <td class="title">メールアドレス<span style="color:#cc0000;">※</span></br>（半角英数字）</td>
-                    <td class="about">
-                        <input type="text" name="メールアドレス(必須)" class="mf" size="35">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <input type="submit" value="送 信 " />
-                        <input type="reset" name="reset" value="リセット" />
-                    </td>
-                </tr>
-            </tbody>
+    <div class="form" summary="入力フォーム">
+        <form id="mailform" class="form-horizontal" method="post" action="mailform/send.cgi" onsubmit="return sendmail(this);">
+            <div class="form-group">
+                <div class="title col-md-3">ご利用店舗</div>
+                <div class="about col-md-6">
+                    <select class="form-control" name="ご利用店舗" id="ご利用店舗">
+                        <option value="">選択してください</option>
+                        <OPTGROUP label=北海道>
+                            <option value="北海道 大曲店">大曲店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=宮城県>
+                            <option value="宮城県 名取店">名取店</option>
+                            <option value="宮城県 富谷店">仙台富谷店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=茨城県>
+                            <option value="茨城県 北茨城店">北茨城店</option>
+                            <option value="茨城県 岩瀬店">岩瀬店</option>
+                            <option value="茨城県 玉造店">玉造店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=栃木県>
+                            <option value="栃木県 今市店">今市店</option>
+                            <option value="栃木県 真岡店">真岡店</option>
+                            <option value="栃木県 大田原店">大田原店</option>
+                            <option value="栃木県 アクロスプラザ西那須野店">アクロスプラザ西那須野店</option>
+                            <option value="栃木県 黒磯店">黒磯店</option>
+                            <option value="栃木県 西那須野店">西那須野店</option>
+                            <option value="栃木県 益子店">益子店</option>
+                            <option value="栃木県 大平店">大平店</option>
+                            <option value="栃木県 さくら氏家店">さくら氏家店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=群馬県>
+                            <option value="群馬県 前橋店">前橋店</option>
+                            <option value="群馬県 前橋みなみ店">前橋みなみ店</option>
+                            <option value="群馬県 宮子カインズ前店">宮子カインズ前店</option>
+                            <option value="群馬県 赤堀店">赤堀店</option>
+                            <option value="群馬県 佐波東店">佐波東店</option>
+                            <option value="群馬県 宮子ベイシア前店">宮子ベイシア前店</option>
+                            <option value="群馬県 尾島店">尾島店</option>
+                            <option value="群馬県 沼田店">沼田店</option>
+                            <option value="群馬県 渋川店">渋川店</option>
+                            <option value="群馬県 鯉沢店">鯉沢店</option>
+                            <option value="群馬県 富岡店">富岡店</option>
+                            <option value="群馬県 富士見店">富士見店</option>
+                            <option value="群馬県 吉井店">吉井店</option>
+                            <option value="群馬県 甘楽店">甘楽店</option>
+                            <option value="群馬県 月夜野店">月夜野店</option>
+                            <option value="群馬県 大泉店">大泉店</option>
+                            <option value="群馬県 高崎新保店">高崎新保店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=埼玉県>
+                            <option value="埼玉県 行田店">行田店</option>
+                            <option value="埼玉県 川本店">川本店</option>
+                            <option value="埼玉県 鶴ヶ島店">鶴ヶ島店</option>
+                            <option value="埼玉県 滑川店">滑川店</option>
+                            <option value="埼玉県 嵐山店">嵐山店</option>
+                            <option value="埼玉県 川島店">川島店</option>
+                            <option value="埼玉県 栗橋店">栗橋店</option>
+                            <option value="埼玉県 大利根店">大利根店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=千葉県>
+                            <option value="千葉県 ちば古市場店">ちば古市場店</option>
+                            <option value="千葉県 銚子店">銚子店</option>
+                            <option value="千葉県 佐倉店">佐倉店</option>
+                            <option value="千葉県 鴨川店">鴨川店</option>
+                            <option value="千葉県 富津店">富津店</option>
+                            <option value="千葉県 八日市場店">八日市場店</option>
+                            <option value="千葉県 大原店">大原店</option>
+                            <option value="千葉県 小見川店">小見川店</option>
+                            <option value="千葉県 大網白里店">大網白里店</option>
+                            <option value="千葉県 長生店">長生店</option>
+                            <option value="千葉県 市原五井店">市原五井店</option>
+                            <option value="千葉県 酒々井店">酒々井店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=東京都>
+                            <option value="東京都 町田店">町田店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=新潟県>
+                            <option value="新潟県 豊栄店">豊栄店</option>
+                            <option value="新潟県 新津店">新津店</option>
+                            <option value="新潟県 長岡店">長岡店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=富山県>
+                            <option value="富山県 大沢野店">大沢野店</option>
+                            <option value="富山県 高岡中曽根店">高岡中曽根店</option>
+                            <option value="富山県 黒部店">黒部店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=長野県>
+                            <option value="長野県 小諸店">小諸店</option>
+                            <option value="長野県 大町店">大町店</option>
+                            <option value="長野県 飯山店">飯山店</option>
+                            <option value="長野県 佐久平店">佐久平店</option>
+                            <option value="長野県 堀金店">堀金店</option>
+                            <option value="長野県 豊科店">豊科店</option>
+                            <option value="長野県 中野小布施店">中野小布施店</option>
+                            <option value="長野県 長野稲田店">長野稲田店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=岐阜県>
+                            <option value="岐阜県 関店">関店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=静岡県>
+                            <option value="静岡県 浜松雄踏店">浜松雄踏店</option>
+                            <option value="静岡県 浜松都田店">浜松都田店</option>
+                            <option value="静岡県 大東店">大東店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=愛知県>
+                            <option value="愛知県 蒲郡店">蒲郡店</option>
+                            <option value="愛知県 常滑店">常滑店</option>
+                            <option value="愛知県 三好店">三好店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=三重県>
+                            <option value="三重県 桑名店">桑名店</option>
+                            <option value="三重県 みえ川越店">みえ川越店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=滋賀県>
+                            <option value="滋賀県 彦根店">彦根店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=京都府>
+                            <option value="京都府 綾部店">綾部店</option>
+                            <option value="京都府 木津川店">木津川店</option>
+                        </OPTGROUP>
+                        <OPTGROUP label=兵庫県>
+                            <option value="兵庫県 篠山店">篠山店</option>
+                            <option value="兵庫県 氷上店">氷上店</option>
+                        </OPTGROUP>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">ご意見・お問い合わせ<span style="color:#cc0000;">※</span>
+                    <br />（全角300字程度）</div>
+                <div class="about col-md-9">
+                    <textarea name="お問合せ内容" class="zenkaku form-control" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">お名前(全角)</div>
+                <div class="about col-md-5">
+                    <input class="form-control" type="text" name="名前" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">郵便番号（半角）</div>
+                <div class="about col-md-5">
+                    <input class="form-control hankaku" type="text" name="郵便番号" maxlength="9"> &nbsp;(例:100-0000)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">ご住所(都道府県名)</div>
+                <div class="about col-md-6">
+                    <select class="form-control" name="都道府県">
+                        <option value="">選択してください</option>
+                        <option value="北海道">北海道</option>
+                        <option value="青森県">青森県</option>
+                        <option value="岩手県">岩手県</option>
+                        <option value="宮城県">宮城県</option>
+                        <option value="秋田県">秋田県</option>
+                        <option value="山形県">山形県</option>
+                        <option value="福島県">福島県</option>
+                        <option value="茨城県">茨城県</option>
+                        <option value="栃木県">栃木県</option>
+                        <option value="群馬県">群馬県</option>
+                        <option value="埼玉県">埼玉県</option>
+                        <option value="千葉県">千葉県</option>
+                        <option value="東京都">東京都</option>
+                        <option value="神奈川県">神奈川県</option>
+                        <option value="新潟県">新潟県</option>
+                        <option value="富山県">富山県</option>
+                        <option value="石川県">石川県</option>
+                        <option value="福井県">福井県</option>
+                        <option value="山梨県">山梨県</option>
+                        <option value="長野県">長野県</option>
+                        <option value="岐阜県">岐阜県</option>
+                        <option value="静岡県">静岡県</option>
+                        <option value="愛知県">愛知県</option>
+                        <option value="三重県">三重県</option>
+                        <option value="滋賀県">滋賀県</option>
+                        <option value="京都府">京都府</option>
+                        <option value="大阪府">大阪府</option>
+                        <option value="兵庫県">兵庫県</option>
+                        <option value="奈良県">奈良県</option>
+                        <option value="和歌山県">和歌山県</option>
+                        <option value="鳥取県">鳥取県</option>
+                        <option value="島根県">島根県</option>
+                        <option value="岡山県">岡山県</option>
+                        <option value="広島県">広島県</option>
+                        <option value="山口県">山口県</option>
+                        <option value="徳島県">徳島県</option>
+                        <option value="香川県">香川県</option>
+                        <option value="愛媛県">愛媛県</option>
+                        <option value="高知県">高知県</option>
+                        <option value="福岡県">福岡県</option>
+                        <option value="佐賀県">佐賀県</option>
+                        <option value="長崎県">長崎県</option>
+                        <option value="熊本県">熊本県</option>
+                        <option value="大分県">大分県</option>
+                        <option value="宮崎県">宮崎県</option>
+                        <option value="鹿児島県">鹿児島県</option>
+                        <option value="沖縄県">沖縄県</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">市区郡町番地(全角)</div>
+                <div class="about col-md-9">
+                    <input class="form-control zenkaku" type="text" name="市区郡町番地" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">建物名（全角）</div>
+                <div class="about col-md-9">
+                    <input class="form-control zenkaku" type="text" name="建物名" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">電話番号（半角）</div>
+                <div class="about col-md-6">
+                    <input class="form-control hankaku" type="text" name="電話"> &nbsp;(例:03-1000-0000)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">メールアドレス<span style="color:#cc0000;">※</span></br>（半角英数字）</div>
+                <div class="about col-md-6">
+                    <input class="form-control mf" type="text" name="メールアドレス(必須)">
+                </div>
+            </div>
+            <div class="form-group">
+                <div colspan="2" align="center">
+                    <input class="btn btn-success" type="submit" value="送 信 " />
+                    <input class="btn btn-default" type="reset" name="reset" value="リセット" />
+                </div>
+            </div>
         </form>
-        <link rel="stylesheet" href="mailform/mailform.css" type="text/css">
+        <!-- <link rel="stylesheet" href="mailform/mailform.css" type="text/css"> -->
         <script type="text/javascript" src="mailform/mailform.js" charset="utf-8"></script>
         <script type="text/javascript" src="mailform/postcodes/get.cgi?js" charset="utf-8"></script>
-    </table>
+    </div>
     <p class="ssl">このお問合せフォームは最新の128ビットSSL(セキュア・ソケット・レイヤ)暗号化通信方式を採用し、安全性を確保しています。SSL暗号化通信方式は現在インターネット上で最も普及している暗号化通信プロトコ ルです。SSLを使用することにより、第三者からの機密性の高い情報の改ざんなどを防止し、インターネット上で安全に個人情報などの送受信が行えます。</p>
 </div>

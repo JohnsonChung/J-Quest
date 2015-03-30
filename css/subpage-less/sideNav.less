@@ -11,12 +11,16 @@
     @navName9: "about";
     @navName10: "contact";
 
+
+    li a {        
+        width: 200px;
+        height: 40px;
+    }
+
     // Loop
     .loop_out (@i) when (@i > 0) {
         li:nth-child(@{i}) a {
-            width: 200px;
-            height: 40px;
-            background-image: url('../images/b_@{navName@{i}}_out.png');
+            background: url('../images/b_@{navName@{i}}_out.png') no-repeat;
         }
         .loop_out(@i - 1);
     }
@@ -25,7 +29,7 @@
     // Loop
     .loop_over (@i) when (@i > 0) {
         li:nth-child(@{i}) a.active {
-            background-image: url('../images/b_@{navName@{i}}_over.png');
+            background: url('../images/b_@{navName@{i}}_over.png') no-repeat;
         }
         .loop_over(@i - 1);
     }
