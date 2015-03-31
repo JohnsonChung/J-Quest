@@ -1,4 +1,4 @@
-<?php include 'php/lib.php' ?>
+<?php include 'php/lib.php'?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 
@@ -18,7 +18,7 @@
     <link rel="contents" href="index.html" title="ホーム" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />    
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!--[if !IE]><!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <!--<![endif]-->
@@ -33,10 +33,10 @@
     <![endif]-->
     <!--[if gt IE 8]>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <![endif]-->    
+    <![endif]-->
     <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <!-- bootstrap -->    
+    <!-- bootstrap -->
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- flickity -->
     <link rel="stylesheet" media="screen" href="bower_components/flickity/css/flickity.css">
@@ -47,7 +47,7 @@
 <body>
     <!-- navbar -->
     <div class="navbar-container">
-        <?php tpl('navbar'); ?>
+        <?php tpl('navbar.hbs');?>
     </div>
     <!-- /navbar -->
     <!--container-->
@@ -73,12 +73,12 @@
             <div class="row row-panel">
                 <div class="col-panel col-md-3 hidden-sm hidden-xs">
                     <!--side-->
-                    <div id="side"><?php tpl('sideNav'); ?></div>
+                    <div id="side"><?php tpl('sideNav.hbs');?></div>
                     <!--/side-->
                 </div>
                 <div class="col-panel col-md-9 col-sm-12 col-xs-12">
                     <!--main-->
-                    <div id="main"><?php main(); ?></div>
+                    <div id="main"><?php main();?></div>
                     <!--/main-->
                 </div>
             </div>
@@ -86,7 +86,7 @@
         <!--/contents-->
         <!--footer-nav-->
         <div class="footer-container">
-        <?php tpl('footer'); ?>
+        <?php tpl('footer.hbs');?>
         </div>
         <!--/footer-nav-->
     </div>
