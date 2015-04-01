@@ -42,6 +42,7 @@
     <link rel="stylesheet" media="screen" href="bower_components/flickity/css/flickity.css">
     <script type="text/javascript" src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
     <script src="js/rollover2.js"></script>
+    <script src="php/hbs.js"></script>
     <script src="php/script.js"></script>
     <script src="js/script.js"></script>
 </head>
