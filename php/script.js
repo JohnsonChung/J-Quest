@@ -17,6 +17,17 @@ $(document).ready(function() {
 				}
 			}
 		});
+					
+		(function() {
+			var target = $("#cover img");
+			var p =  search.p;
+			var result = search.p.match(/(.+)\/?/)[1];
+			console.log(result);
+			if(target != null) {
+				var s = "images/c_" + result + ".jpg";
+				target.attr("src", s );
+			}
+		})();
 	}
 
 	function searchToObject() {
