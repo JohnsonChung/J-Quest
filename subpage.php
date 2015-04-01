@@ -41,7 +41,9 @@
     <!-- flickity -->
     <link rel="stylesheet" media="screen" href="bower_components/flickity/css/flickity.css">
     <script type="text/javascript" src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="js/rollover2.js"></script>
     <script src="php/script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -60,7 +62,7 @@
         </div>
         <!--/header-->
         <!--contents-->
-        <div class="container">
+        <div id="contents" class="container">
             <!--cover-->
             <div class="row visible-md visible-lg">
                 <div class="col-md-12">
@@ -89,6 +91,11 @@
         <?php tpl('footer.hbs');?>
         </div>
         <!--/footer-nav-->
+        <!--上へ戻るボタン-->
+        <div id="return_top" class="hidden-xs">
+            <a href="#top">&nbsp;</a>
+        </div>
+        <!--/上へ戻るボタン-->
     </div>
     <!--/container-->
     <script type="text/javascript">

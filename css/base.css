@@ -195,6 +195,14 @@
   #covor img {
     width: 100%;
   }
+  .form {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .form [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -875,6 +883,9 @@ ul.breadcrumbs li {
   margin-bottom: 15px;
 }
 .shop #nav-area .col-xs-12 {
+  margin-bottom: 5px;
+}
+.shop #nav-area .btn {
   margin-bottom: 5px;
 }
 table.map {

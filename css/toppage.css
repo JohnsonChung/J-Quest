@@ -195,6 +195,14 @@
   #covor img {
     width: 100%;
   }
+  .form {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .form [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
