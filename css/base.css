@@ -460,6 +460,7 @@ ul {
 }
 #footer-nav {
   margin: 15px auto;
+  width: 870px;
   zoom: 1;
 }
 #footer-nav:before,
