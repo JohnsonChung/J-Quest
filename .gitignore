@@ -1,5 +1,4 @@
 .project
-.htaccess
 *.pdf
 *.mno
 *.sublime-project
@@ -7,7 +6,6 @@
 *.tmproj
 *.bak
 *.swp
-*.swf
 *.psd
 *~.nib
 

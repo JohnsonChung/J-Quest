@@ -1,9 +1,3 @@
-var hbs = {
-    change: function(target) {
-        window.location.href = "subpage.php?p=" + target;
-    }
-};
-
 $(document).ready(function() {
     var search = searchToObject();
     if(search.hasOwnProperty('p')) {

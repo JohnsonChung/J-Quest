@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /J-Quest/
+RewriteRule services\.html subpage.php?p=service [R=301,L]
+RewriteRule recruitment\.html subpage.php?p=recruit [R=301,L]
+RewriteRule concepts\.html subpage.php?p=concept [R=301,L]
+RewriteRule shops\.html subpage.php?p=shop [R=301,L]
+RewriteRule howtos\.html subpage.php?p=howto [R=301,L]
+RewriteRule aboutus\.html subpage.php?p=about [R=301,L]
+RewriteRule campaign\.html subpage.php?p=campaign [R=301,L]
+RewriteRule ^contact subpage.php?p=contact [R=301,L]
+RewriteRule faq\.html subpage.php?p=faq [R=301,L]
