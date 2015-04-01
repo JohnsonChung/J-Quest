@@ -195,43 +195,39 @@ a {
 			margin-bottom: 15px;
 		}
 	}
-	#footer-nav {
-		clear: both;
-		margin: 15px 0;
-		width: 100%;
-		.nav-left {
-			float: left;
-			padding-bottom: 15px;
-			padding-right: 15px;
-			width: 65px;
-		}
-		.nav-right {
-			color: @gray-darken;
-			float: right;
-			font-size: 1em;
-			line-height: 150%;
-			padding-top: 0.25em;
-			text-align: left;
-			width: 820px;
-		}
-		.nav-right2 {
-			color: #666666;
-			float: right;
-			font-size: 0.75em;
-			line-height: 150%;
-			padding-top: 0.5em;
-			text-align: left;
-			width: 810px;
-		}
-		.nav-mobile {
-			li {
-				list-style: none;				
-				margin-bottom: 3px;
-			}
-		}
-	}
 }
 
+#footer-nav {
+	text-align: left;
+  margin: 15px auto;
+  width: 900px - 30;
+  
+  .clearfix;
+  .logo-enenos {
+    margin: 0 10px 0 0;
+  }
+  .nav {
+    height: 65px;
+    margin-top: 8px;
+  }
+  ul {
+    list-style: none;    
+    
+    li {
+      display: inline;
+      &:after {
+        content: "｜";
+      }
+      &:last-child:after {
+        content: "";
+      }
+      a {
+
+      }
+    }
+  }
+  
+}
 #town {
 	background: url(../images/town.png) repeat-x;
 	bottom: 30px;
