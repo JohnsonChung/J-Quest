@@ -9,3 +9,6 @@ RewriteRule aboutus\.html subpage.php?p=about [R=301,L]
 RewriteRule campaign\.html subpage.php?p=campaign [R=301,L]
 RewriteRule ^contact subpage.php?p=contact [R=301,L]
 RewriteRule faq\.html subpage.php?p=faq [R=301,L]
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
