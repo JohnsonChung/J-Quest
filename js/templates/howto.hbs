@@ -40,18 +40,22 @@
     </style>
     <script>
     $(document).ready(function() {
-        $('#gallery-cicle, #gallery-sensha').flickity();
+        $('#gallery-cicle, #gallery-sensha').flickity({
+            "imagesLoaded": true
+        });
         $('#gallery-sensha-nav').flickity({
             "asNavFor": "#gallery-sensha",
             "contain": true,
             "pageDots": false,
-            "prevNextButtons": false
+            "prevNextButtons": false,
+            "imagesLoaded": true
         });
         $('#gallery-cicle-nav').flickity({
             "asNavFor": "#gallery-cicle",
             "contain": true,
             "pageDots": false,
-            "prevNextButtons": false
+            "prevNextButtons": false,
+            "imagesLoaded": true
         });
     });
     </script>
@@ -69,15 +73,15 @@
     </div>
     <div id="gallery-cicle-nav" class="gallery gallery-nav ">
         <!--  Emmet  .gallery-cell*8>img[src="howto/images/cicle$$.jpg"] -->
-        <div class="gallery-cell"><img src="howto/images/cicle00.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle01.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle02.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle03.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle04.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle05.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle06.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle07.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/cicle08.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle00s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle01s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle02s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle03s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle04s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle05s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle06s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle07s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/cicle08s.jpg" alt=""></div>
     </div>
     <!-- <iframe width="650" height="530" frameborder="0" scrolling="0" marginheight="0" marginwidth="0" title="給油からご精算までムービー" src="howto/kyuyu.html"></iframe> -->
     <!--/スライダー-->
@@ -107,24 +111,24 @@
     </div>
     <div id="gallery-sensha-nav" class="gallery gallery-nav ">
         <!--  Emmet  .gallery-cell*8>img[src="howto/images/cicle$$.jpg"] -->
-        <div class="gallery-cell"><img src="howto/images/sensha00.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha01.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha02.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha03.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha04.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha05.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha06.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha07.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha08.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha09.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha10.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha11.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha12.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha13.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha14.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha15.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha16.jpg" alt=""></div>
-        <div class="gallery-cell"><img src="howto/images/sensha17.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha00s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha01s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha02s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha03s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha04s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha05s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha06s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha07s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha08s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha09s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha10s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha11s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha12s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha13s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha14s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha15s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha16s.jpg" alt=""></div>
+        <div class="gallery-cell"><img src="howto/images/sensha17s.jpg" alt=""></div>
     </div>
     <!-- <iframe width="650" height="530" frameborder="0" scrolling="0" marginheight="0" marginwidth="0" title="洗車ムービー" src="howto/sensha.html"></iframe> -->
     <!--/スライダー-->
