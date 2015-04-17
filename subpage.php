@@ -44,7 +44,7 @@
     <script type="text/javascript" src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
     <script src="js/rollover2.js"></script>
     <script src="php/hbs.js"></script>
-    <script src="php/script.js?2"></script>
+    <script src="php/script.js?3"></script>
     <script src="js/script.js"></script>
 </head>
 
