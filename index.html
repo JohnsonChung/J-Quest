@@ -41,7 +41,6 @@
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- <script type="text/javascript" src="js/equalHeightcolumns.js"></script> -->
     <script type="text/javascript" src="js/rollover2.js"></script>
-    <script type="text/javascript" src="js/popUp.js"></script>
     <script src="php/hbs.js"></script>
 </head>
 
@@ -392,116 +391,7 @@
         </div>
         <!--/上へ戻るボタン-->
     </div>
-    <!--/container-->
-    <!-- POPUP -->
-    <div id="element_to_pop_up" class="content">
-        <a class="b-close"><img src="images/close.gif" height="20px" width="20px"></img><a/>
-            <div id="container">
-                <div id="left1" class="column">
-                    <br><img src="images/keeperlogo.gif" height="67" width="252" align="left"></img>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <div style="width:150px;">
-                        <p class="text" style="border-radius:5px;">長野県</p>
-                    </div>
-                    <div class="text2" style="width:400px;">
-                        <p>
-                            <bold>●豊科店</bold>
-                            <br />
-                    </div>
-                    <div class="text3" style="width:400px;">
-                        フリーダイアル：0120-98-1706
-                        <br /> 所在地：長野県安曇野市豊科南穂高754-3
-                        <br /> 取扱商品：
-                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
-                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
-                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
-                        <a href="http://www.keepercoating.jp/proshop/03874.html" target="_blank">コーティング豊科店</a></p>
-                    </div>
-                    <div style="width:150px;">
-                        <p class="text" style="border-radius:5px;">群馬県</p>
-                    </div>
-                    <div class="text2" style="width:400px;">
-                        <p>
-                            <bold>●宮子カインズ前店</bold>
-                            <br />
-                    </div>
-                    <div class="text3" style="width:400px;">
-                        フリーダイアル：0120-934-980
-                        <br /> 所在地：群馬県伊勢崎市宮子町3146
-                        <br /> 取扱商品：
-                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
-                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
-                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
-                        <a href="http://www.keepercoating.jp/proshop/03911.html" target="_blank">コーティング宮子カインズ前店</a></p>
-                    </div>
-                    <div class="text2" style="width:400px;">
-                        <p>
-                            <bold>●高崎新保店</bold>
-                            <br />
-                    </div>
-                    <div class="text3" style="width:400px;">
-                        フリーダイアル：0800-8000-762
-                        <br /> 所在地：群馬県高崎市日高町1054-1
-                        <br /> 取扱商品：
-                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
-                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
-                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
-                        <a href="http://www.keepercoating.jp/proshop/04699.html" target="_blank">コーティング高崎新保店</a></p>
-                    </div>
-                    <div style="width:150px;">
-                        <p class="text" style="border-radius:5px;">千葉県</p>
-                    </div>
-                    <div class="text2" style="width:400px;">
-                        <p>
-                            <bold>●酒々井店</bold>
-                            <br />
-                    </div>
-                    <div class="text3" style="width:400px;">
-                        電話：043-310-7516
-                        <br /> 所在地：千葉県印旛郡酒々井町飯積1丁目2-9
-                        <br /> 取扱商品：
-                        <img src="images/bnr_clear.jpg" width="101" height="19" alt="クリスタル" />
-                        <img src="images/bnr_diamond.jpg" width="101" height="19" alt="ダイアモンド" />
-                        <img src="images/bnr_pure.jpg" width="101" height="19" alt="ピュア" /> URL：
-                        <a href="http://www.keepercoating.jp/proshop/04254.html" target="_blank">コーティング酒々井店</a></p>
-                    </div>
-                </div>
-                <div id="right" class="column">
-                    <br><img src="images/keepersite.gif" height="145" width="230"></img>
-                    <p><a href="http://www.keepercoating.jp/" target="_blank">KeeperProホームページ</a></p>
-                    <br />
-                    <img src="images/qr_toyoshina.jpg" width="84" height="83" alt="toyoshinaQR" />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <img src="images/qr_miyako.jpg" width="84" height="83" alt="qrMiyako" />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <img src="images/qr_takasakishinbo.jpg" width="84" height="83" alt="qrTakasakishinbo" />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <img src="images/qr_shisui.jpg" width="84" height="83" alt="qrShisui" /></div>
-            </div>
-    </div>
-    <script>
-    $(document).ready(function() {
-        $('#modal').bind('click', function(e) {
-            e.preventDefault();
-
-            // Triggering bPopup when click event is fired
-            $('#element_to_pop_up').bPopup();
-        });
-    });
-    </script>
-    <!--/POPUP -->
+    <!--/container-->    
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29774849-1']);
