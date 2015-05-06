@@ -1,6 +1,6 @@
 <?php
 function tpl($target) {
-	echo file_get_contents("js/templates/$target");
+	echo file_get_contents("templates/$target");
 }
 
 function main() {
@@ -38,7 +38,7 @@ function main() {
 					$p = $_GET['p'];
 			}
 
-			echo file_get_contents('js/templates/' . $p . '.hbs');
+			echo file_get_contents('templates/' . $p . '.hbs');
 		}
 	}
 }
