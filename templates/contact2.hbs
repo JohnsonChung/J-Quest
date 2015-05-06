@@ -3,11 +3,11 @@
     <p>弊社へのご意見・お問合せは、下記ご入力の上「送信」ボタンをクリックしてください。
         <br />（<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）</p>
     <div class="form" summary="入力フォーム">
-        <form id="mailform" class="form-horizontal" method="post" action="mailform/send.cgi" onsubmit="return sendmail(this);">
+        <form id="mailform" class="form-horizontal" method="post" action="/contact2/submitContact.php">
             <div class="form-group">
                 <div class="title col-md-3">ご利用店舗</div>
                 <div class="about col-md-6">
-                    <select class="form-control" name="ご利用店舗" id="ご利用店舗">
+                    <select class="form-control" name="available_store" id="ご利用店舗" required>
                         <option value="">選択してください</option>
                         <OPTGROUP label=北海道>
                             <option value="北海道 大曲店">大曲店</option>
@@ -133,25 +133,25 @@
                 <div class="title col-md-3">ご意見・お問い合わせ<span style="color:#cc0000;">※</span>
                     <br />（全角300字程度）</div>
                 <div class="about col-md-9">
-                    <textarea name="お問合せ内容" class="zenkaku form-control" rows="10"></textarea>
+                    <textarea name="opinions_enquiries" class="zenkaku form-control" rows="10" required></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <div class="title col-md-3">お名前(全角)</div>
                 <div class="about col-md-5">
-                    <input class="form-control" type="text" name="名前" value="">
+                    <input class="form-control" type="text" name="name" value="">
                 </div>
             </div>
             <div class="form-group">
                 <div class="title col-md-3">郵便番号（半角）</div>
                 <div class="about col-md-5">
-                    <input class="form-control hankaku" type="text" name="郵便番号" maxlength="9"> &nbsp;(例:100-0000)
+                    <input class="form-control hankaku" type="text" name="postal_code" maxlength="9"> &nbsp;(例:100-0000)
                 </div>
             </div>
             <div class="form-group">
                 <div class="title col-md-3">ご住所(都道府県名)</div>
                 <div class="about col-md-6">
-                    <select class="form-control" name="都道府県">
+                    <select class="form-control" name="state">
                         <option value="">選択してください</option>
                         <option value="北海道">北海道</option>
                         <option value="青森県">青森県</option>
@@ -206,25 +206,36 @@
             <div class="form-group">
                 <div class="title col-md-3">市区郡町番地(全角)</div>
                 <div class="about col-md-9">
-                    <input class="form-control zenkaku" type="text" name="市区郡町番地" />
+                    <input class="form-control zenkaku" type="text" name="city" />
                 </div>
             </div>
             <div class="form-group">
                 <div class="title col-md-3">建物名（全角）</div>
                 <div class="about col-md-9">
-                    <input class="form-control zenkaku" type="text" name="建物名" />
+                    <input class="form-control zenkaku" type="text" name="building_name" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="title col-md-3">弊社からお客様へのご回答方法</div>
+                <div class="about col-md-9">
+                    <input type="radio" name="contact_method" class="contact_method" value="telephone" checked="checked">
+                    電話希望
+                    <br>
+                    <input type="radio" name="contact_method" class="contact_method" value="mail"> メール希望
+                    <br>
+                    <input type="radio" name="contact_method" class="contact_method" value="NA"> 回答は不要
                 </div>
             </div>
             <div class="form-group">
                 <div class="title col-md-3">電話番号（半角）</div>
                 <div class="about col-md-6">
-                    <input class="form-control hankaku" type="text" name="電話"> &nbsp;(例:03-1000-0000)
+                    <input class="form-control hankaku" type="text" name="telephone_number"> &nbsp;(例:03-1000-0000)
                 </div>
             </div>
             <div class="form-group">
-                <div class="title col-md-3">メールアドレス<span style="color:#cc0000;">※</span></br>（半角英数字）</div>
+                <div class="title col-md-3">メールアドレス（半角英数字）</div>
                 <div class="about col-md-6">
-                    <input class="form-control mf" type="text" name="メールアドレス(必須)">
+                    <input class="form-control mf" type="text" name="email_id">
                 </div>
             </div>
             <div class="form-group">
@@ -233,10 +244,11 @@
                     <input class="btn btn-default" type="reset" name="reset" value="リセット" />
                 </div>
             </div>
+            <input type="hidden" name="submit" value="1" />
         </form>
         <!-- <link rel="stylesheet" href="mailform/mailform.css" type="text/css"> -->
         <script type="text/javascript" src="https://www.j-quest.jp/contact/mailform/mailform.js" charset="utf-8"></script>
-        <script type="text/javascript" src="https://www.j-quest.jp/contact/mailform/postcodes/get.cgi?js" charset="utf-8"></script>
+        <!--<script type="text/javascript" src="https://www.j-quest.jp/contact/mailform/postcodes/get.cgi?js" charset="utf-8"></script>-->
     </div>
     <p class="ssl">このお問合せフォームは最新の128ビットSSL(セキュア・ソケット・レイヤ)暗号化通信方式を採用し、安全性を確保しています。SSL暗号化通信方式は現在インターネット上で最も普及している暗号化通信プロトコ ルです。SSLを使用することにより、第三者からの機密性の高い情報の改ざんなどを防止し、インターネット上で安全に個人情報などの送受信が行えます。</p>
 </div>
