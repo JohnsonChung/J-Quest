@@ -33,7 +33,11 @@ function main() {
 			switch ($_GET['p']) {
 				case "recruit":
 					$p = "recruit/recruit-index";
-					break;
+                    break;
+                case "contact":
+                    header("Location: /contact/contactus.html");
+                    exit(0);
+                    break;
 				default:
 					$p = $_GET['p'];
 			}

@@ -22,6 +22,10 @@ $(document).ready(function() {
                     }
                 });
             }
+        } else if(search.p === 'contact') {
+            if(search.hasOwnProperty('submit_success')) {
+                alert("送信成功")
+            }
         }
     }
 
