@@ -1,8 +1,9 @@
 /* サイトの編集情報 */
 
-/* Updates 2015.4.25 */
+/* Updates 2015.4.29 */
 // ==================================================================================
-モバイルに対応するように変更しました。
+当サイトをモバイルに対応するように変更しました。
+
 今回に導入しました内容について
 
 // CSS
@@ -11,9 +12,9 @@ LessCSS
 LessHat
 
 // Javascript
-jQuery 1.9.1
-selectivizr
-flickity (howtos.hbs)
+jQuery 1.9.1 (update)
+selectivizr 
+flickity (howtos.hbsのアルバム)
 html5shiv (ie html5 support)
 respond (ie media-query support)
 
@@ -25,7 +26,7 @@ old_pagesにおる古い*.html のbodyの部分を テンプレート化(*.hbs)�
 // テンプレートの構造について
 ..\subpage.php 			は*.hbsファイルの入り口です。 htmlの基本構造はこのファイルにおいています。
 ..\php\*.php|*.js 		はチェンジページとroutingに関するコード。
-..\js\templates\*.hbs 	はすべてのsubpagesのbody部分、即ちサイトの内容です。
+..\templates\*.hbs 		はすべてのsubpagesのbody部分、即ちサイトの内容です。
 
 // *.hbs の編集について
 *.hbsの内容は古いページのbody部分だけを抽出しましたものです。
