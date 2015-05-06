@@ -13,7 +13,7 @@
     <meta name="description" content="全国に81店舗のショッピングモール併設型ガソリンスタンドを運営するJ-Quest（ジェイ･クエストのウェブサイト。企業コンセプト、店舗情報、商品・サービスの紹介、セルフガソリンスタンド、セルフ洗車のご利用方法、採用情報をご覧いただけます。" />
     <meta name="author" content="J-Quest" />
     <meta name="copyright" content="J-Quest" />
-    <title>J-Questの使命 | J-Quest（ジェイ･クエスト）のウェブサイト</title>
+    <title>J-Quest（ジェイ･クエスト）のウェブサイト</title>
     <!-- link -->
     <link rel="alternate" type="application/rss+xml" title="ROR" href="ror.xml" />
     <link rel="contents" href="index.html" title="ホーム" />
