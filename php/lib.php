@@ -34,10 +34,6 @@ function main() {
 				case "recruit":
 					$p = "recruit/recruit-index";
                     break;
-                case "contact":
-                    header("Location: /contact/contactus.html");
-                    exit(0);
-                    break;
 				default:
 					$p = $_GET['p'];
 			}

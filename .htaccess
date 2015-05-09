@@ -12,8 +12,18 @@ RewriteRule shops\.html subpage.php?p=shop [R=301,L]
 RewriteRule howtos\.html subpage.php?p=howto [R=301,L]
 RewriteRule aboutus\.html subpage.php?p=about [R=301,L]
 RewriteRule campaign\.html subpage.php?p=campaign [R=301,L]
-#RewriteRule ^contact subpage.php?p=contact [R=301,L]
+RewriteRule contact/contact.html subpage.php?p=contact [R=301,L]
 RewriteRule faq\.html subpage.php?p=faq [R=301,L]
 
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<filesMatch "\.(html|htm)$">
+  FileETag None
+  <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+  </ifModule>
+</filesMatch>
