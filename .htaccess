@@ -12,7 +12,7 @@ RewriteRule shops\.html subpage.php?p=shop [R=301,L]
 RewriteRule howtos\.html subpage.php?p=howto [R=301,L]
 RewriteRule aboutus\.html subpage.php?p=about [R=301,L]
 RewriteRule campaign\.html subpage.php?p=campaign [R=301,L]
-RewriteRule contact/contact.html subpage.php?p=contact [R=301,L]
+RewriteRule contact/contactus.html subpage.php?p=contact [R=301,L]
 RewriteRule faq\.html subpage.php?p=faq [R=301,L]
 
 RewriteCond %{HTTPS} !=on
