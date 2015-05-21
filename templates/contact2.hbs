@@ -1,9 +1,110 @@
+<script>
+var confirmed = false;
+
+function contactOnSubmit() {
+    if(confirmed) return true;
+
+  var fields = [{
+    label: "ご利用店舗",
+    selector: "select[name=available_store]"
+  }, {
+    label: "ご意見・お問い合わせ",
+    selector: "textarea[name=opinions_enquiries]"
+  }, {
+    label: "お名前",
+    selector: "input[name=name]"
+  }, {
+    label: "郵便番号",
+    selector: "input[name=postal_code]"
+  }, {
+    label: "ご住所(都道府県名)",
+    selector: "select[name=state]"
+  }, {
+    label: "市区郡町番地",
+    selector: "input[name=city]"
+  }, {
+    label: "建物名（全角）",
+    selector: "input[name=building_name]"
+  }, {
+    label: "弊社からお客様へのご回答方法",
+    selector: "input[name=contact_method]:checked",
+    transform: function(value) {
+      switch (value) {
+        case "telephone":
+          return "電話希望";
+        case "mail":
+          return "メール希望";
+        case "NA":
+        default:
+          return "回答は不要";
+      }
+    }
+  }, {
+    label: "電話番号",
+    selector: "input[name=telephone_number]"
+  }, {
+    label: "メールアドレス",
+    selector: "input[name=email_id]"
+  }];
+
+  var $m = $("#myModal");
+  $m.modal();
+
+  var $table = $("#confirm-fields", $m);
+  $table.empty();
+  for(var i = 0;i < fields.length;i++) {
+    var $tr = $("<tr>");
+    $table.append($tr);
+    
+    var $td1 = $("<th>"), $td2 = $("<td>");
+    $tr.append($td1);
+    $tr.append($td2);
+    
+    $td1.html(fields[i].label);
+    
+    var content = $(fields[i].selector).val();
+    if($.isFunction(fields[i].transform)) {
+      content = fields[i].transform(content);
+    }
+    var $pre = $("<pre>");
+    $pre.html(content);
+    $td2.append($pre);
+  }
+
+  return false;
+}
+
+function confirmSubmit() {
+    confirmed = true;
+    $("#mailform input[type=submit]").click();
+}
+</script>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">確　認</h4>
+      </div>
+      <div class="modal-body">
+        <table id="confirm-fields" class="table table-striped">
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary" onclick="confirmSubmit()">確　認</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="contact">
     <h2>お問合せ</h2>
     <p>弊社へのご意見・お問合せは、下記ご入力の上「送信」ボタンをクリックしてください。
         <br />（<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）</p>
     <div class="form" summary="入力フォーム">
-        <form id="mailform" class="form-horizontal" method="post" action="/contact2/submitContact.php">
+        <form id="mailform" class="form-horizontal" method="post" action="/contact2/submitContact.php" onsubmit="return contactOnSubmit()">
             <div class="form-group">
                 <div class="title col-md-3">ご利用店舗  <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
