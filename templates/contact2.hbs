@@ -5,7 +5,7 @@
     <div class="form" summary="入力フォーム">
         <form id="mailform" class="form-horizontal" method="post" action="/contact2/submitContact.php">
             <div class="form-group">
-                <div class="title col-md-3">ご利用店舗</div>
+                <div class="title col-md-3">ご利用店舗  <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
                     <select class="form-control" name="available_store" id="ご利用店舗" required>
                         <option value="">選択してください</option>
@@ -216,14 +216,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="title col-md-3">弊社からお客様へのご回答方法</div>
+                <div class="title col-md-3">弊社からお客様へのご回答方法   <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-9">
-                    <input type="radio" name="contact_method" class="contact_method" value="telephone" checked="checked">
+                    <input type="radio" name="contact_method" class="contact_method" value="telephone" required>
                     電話希望
                     <br>
-                    <input type="radio" name="contact_method" class="contact_method" value="mail"> メール希望
+                    <input type="radio" name="contact_method" class="contact_method" value="mail" required> メール希望
                     <br>
-                    <input type="radio" name="contact_method" class="contact_method" value="NA"> 回答は不要
+                    <input type="radio" name="contact_method" class="contact_method" value="NA" required> 回答は不要
                 </div>
             </div>
             <div class="form-group">
@@ -233,14 +233,37 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="title col-md-3">メールアドレス（半角英数字）</div>
+                <div class="title col-md-3">メールアドレス   <span style="color:#cc0000;">※</span>  （半角英数字）</div>
                 <div class="about col-md-6">
-                    <input class="form-control mf" type="text" name="email_id">
+                    <input class="form-control mf" type="email" name="email_id" id="email1" required>
                 </div>
             </div>
             <div class="form-group">
+                <div class="title col-md-3">メールアドレス確認  <span style="color:#cc0000;">※</span>  </div>
+                <div class="about col-md-6">
+                    <input class="form-control mf" type="email" id="email2" required >
+                </div>
+            </div>
+            <script>
+            (function() {
+                var email1 = document.getElementById("email1")
+                  , email2 = document.getElementById("email2");
+
+                function validateEmail(){
+                  if(email1.value != email2.value) {
+                    email2.setCustomValidity("確認のため再度ご入力ください。");
+                  } else {
+                    email2.setCustomValidity('');
+                  }
+                }
+
+                email1.onchange = validateEmail;
+                email2.onkeyup = validateEmail;
+            })();
+            </script>
+            <div class="form-group">
                 <div colspan="2" align="center">
-                    <input class="btn btn-success" type="submit" value="送 信 " />
+                    <input class="btn btn-success" type="submit" value="確　認" />
                     <input class="btn btn-default" type="reset" name="reset" value="リセット" />
                 </div>
             </div>
