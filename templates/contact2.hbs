@@ -1,3 +1,6 @@
+<style>
+.star { color: red; }
+</style>
 <script>
 var confirmed = false;
 
@@ -327,24 +330,64 @@ function confirmSubmit() {
                     <input type="radio" name="contact_method" class="contact_method" value="NA" required> 回答は不要
                 </div>
             </div>
-            <div class="form-group">
-                <div class="title col-md-3">電話番号（半角）</div>
+            <div class="form-group group-telephone">
+                <div class="title col-md-3">電話番号（半角） <span class="star">※</span>  </div>
                 <div class="about col-md-6">
                     <input class="form-control hankaku" type="text" name="telephone_number"> &nbsp;(例:03-1000-0000)
                 </div>
             </div>
-            <div class="form-group">
-                <div class="title col-md-3">メールアドレス   <span style="color:#cc0000;">※</span>  （半角英数字）</div>
+            <div class="form-group group-email">
+                <div class="title col-md-3">メールアドレス   <span class="star">※</span>  （半角英数字）</div>
                 <div class="about col-md-6">
-                    <input class="form-control mf" type="email" name="email_id" id="email1" required>
+                    <input class="form-control mf" type="email" name="email_id" id="email1">
                 </div>
             </div>
-            <div class="form-group">
-                <div class="title col-md-3">メールアドレス確認  <span style="color:#cc0000;">※</span>  </div>
+            <div class="form-group group-email">
+                <div class="title col-md-3">メールアドレス確認  <span class="star">※</span>  </div>
                 <div class="about col-md-6">
-                    <input class="form-control mf" type="email" id="email2" required >
+                    <input class="form-control mf" type="email" id="email2">
                 </div>
             </div>
+            <script>
+            (function() {
+                var gTelephone = $(".group-telephone"),
+                    gEmail = $(".group-email");
+
+                var telephone = $("input[name=telephone_number]")
+                  , email1 = $("#email1")
+                  , email2 = $("#email2");
+
+                $(".star", gTelephone).hide();
+                $(".star", gEmail).hide();
+
+                $("input[name=contact_method]").change(function() {
+                    switch(this.value) {
+                        case 'telephone':
+                            telephone.attr('required', true);
+                            $(".star", gTelephone).show();
+                            email1.attr('required', false);
+                            email2.attr('required', false);
+                            $(".star", gEmail).hide();
+                            break;
+
+                        case 'mail':
+                            telephone.attr('required', false);
+                            $(".star", gTelephone).hide();
+                            email1.attr('required', true);
+                            email2.attr('required', true);
+                            $(".star", gEmail).show();
+                            break;
+
+                        default:
+                            telephone.attr('required', false);
+                            email1.attr('required', false);
+                            email2.attr('required', false);
+                            $(".star", gTelephone).hide();
+                            $(".star", gEmail).hide();
+                    }
+                });
+            })();
+            </script>
             <script>
             (function() {
                 var email1 = document.getElementById("email1")
