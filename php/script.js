@@ -14,18 +14,24 @@ $(document).ready(function() {
             }
         });
 
-        if(search.p === 'shop') {
-            if(isMobile()) {
-                $(".shopname > a").each(function(i, e) {
-                    if(e && typeof e.href === 'string' && e.href.length > 0 && e.href.match(/eneos/) !== null) {
-                        e.href = e.href.replace("/pc/", "/sp/");
-                    }
-                });
-            }
-        } else if(search.p === 'contact') {
-            if(search.hasOwnProperty('submit_success')) {
-                alert("送信成功")
-            }
+        switch(search.p) {
+            case 'shop':
+                if(isMobile()) {
+                    $(".shopname > a").each(function(i, e) {
+                        if(e && typeof e.href === 'string' && e.href.length > 0 && e.href.match(/eneos/) !== null) {
+                            e.href = e.href.replace("/pc/", "/sp/");
+                        }
+                    });
+                }
+            break;
+
+            case 'contact':
+            case 'contact2':
+                if(search.hasOwnProperty('submit_success')) {
+                    alert("送信成功");
+                    window.location.href = "/";
+                }
+            break;
         }
     }
 
