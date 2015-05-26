@@ -34,7 +34,10 @@
 	transition:  color 0.2s ease-in-out;
 }
 .st-accordion ul li > a span{
-	background: transparent url(../../recruit_new/images/down.png) no-repeat center center;
+	/*background: transparent url(../../recruit_new/images/down.png) no-repeat center center;*/
+	background: transparent url(../images/arbeit/down.gif) no-repeat center center;
+	-webkit-background-size: contain;
+	background-size: contain;
 	text-indent:-9000px;
 	width: 26px;
 	height: 14px;

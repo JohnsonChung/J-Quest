@@ -186,7 +186,7 @@
 			( instance.current !== -1 ) ? current = instance.current : current = instance.$el.find('li.st-open:last').index();
 			
 			$('html, body').stop().animate({
-				scrollTop	: ( instance.options.oneOpenedItem ) ? instance.$items.eq( current ).data( 'offsetTop' ) : instance.$items.eq( current ).offset().top
+				scrollTop	: ( instance.options.oneOpenedItem ) ? instance.$items.eq( current ).data( 'offsetTop') : instance.$items.eq( current ).offset().top - 65
 			}, instance.options.scrollSpeed, instance.options.scrollEasing );
 		
 		}
