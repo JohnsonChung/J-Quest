@@ -93,6 +93,26 @@ function confirmSubmit() {
     confirmed = true;
     $("#mailform input[type=submit]").click();
 }
+
+$(function() {
+    var $select = $("select[name=available_store]");
+    $.get("https://www.j-quest.jp/contact3/stores", function(data) {
+        if($.isArray(data) && data.length) {
+            for(var i = 0;i < data.length;i++) {
+                var prefecture = data[i];
+                var stores = prefecture.stores;
+                var $optgroup = $("<optgroup/>").attr("label", prefecture.name);
+                for(var j = 0;j < stores.length;j++) {
+                    var store = stores[j];
+                    var $option = $("<option/>").attr("value", store.id).html(store.name);
+                    $optgroup.append($option);
+                }
+                $select.append($optgroup);
+            }
+        }
+    });
+});
+    
 </script>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -127,6 +147,7 @@ function confirmSubmit() {
                 <div class="about col-md-6">
                     <select class="form-control" name="available_store" id="ご利用店舗" required>
                         <option value="">選択してください</option>
+                        <!--
                         <OPTGROUP label=北海道>
                             <option value="北海道 大曲店">大曲店</option>
                         </OPTGROUP>
@@ -244,6 +265,7 @@ function confirmSubmit() {
                             <option value="兵庫県 篠山店">篠山店</option>
                             <option value="兵庫県 氷上店">氷上店</option>
                         </OPTGROUP>
+                        -->
                     </select>
                 </div>
             </div>
