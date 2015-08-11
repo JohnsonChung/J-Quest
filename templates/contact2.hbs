@@ -21,7 +21,10 @@ function contactOnSubmit() {
 
   var fields = [{
     label: "ご利用店舗",
-    selector: "select[name=available_store]"
+    selector: "select[name=available_store]",
+    transform: function($e) {
+        return $e.find("option:checked").html();
+    }
   }, {
     label: "ご意見・お問い合わせ",
     selector: "textarea[name=opinions_enquiries]"
@@ -43,8 +46,8 @@ function contactOnSubmit() {
   }, {
     label: "弊社からお客様へのご回答方法",
     selector: "input[name=contact_method]:checked",
-    transform: function(value) {
-      switch (value) {
+    transform: function($ele) {
+      switch ($ele.val()) {
         case "telephone":
           return "電話希望";
         case "mail":
@@ -79,7 +82,7 @@ function contactOnSubmit() {
     
     var content = $(fields[i].selector).val();
     if($.isFunction(fields[i].transform)) {
-      content = fields[i].transform(content);
+      content = fields[i].transform($(fields[i].selector));
     }
     var $pre = $("<pre>");
     $pre.html(content);
@@ -129,7 +132,7 @@ $(function() {
         </div>
       </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-primary" onclick="confirmSubmit()">送　信</button>
+        <button type="button" class="btn btn-primary" onclick="confirmSubmit()">確 認</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">戻　る</button>
       </div>
     </div>
@@ -442,8 +445,8 @@ $(function() {
             })();
             </script>
             <div class="form-group">
-                <div colspan="2" align="center">
-                    <input class="btn btn-success" type="submit" value="送 信" />
+                <div align="center">
+                    <input class="btn btn-success" type="submit" value="確 認" />
                     <input class="btn btn-default" type="reset" name="reset" value="リセット" />
                 </div>
             </div>
