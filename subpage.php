@@ -20,21 +20,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-    <!--[if !IE]><!-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <!--<![endif]-->
-    <!--[if lte IE 8]>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <![endif]-->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/selectivizr-min.js"></script>
-      <script src="bower_components/respond/dest/respond.min.js"></script>
-    <![endif]-->
-    <!--[if gt IE 8]>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <![endif]-->
+
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.15.10/minified/polyfiller.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="js/selectivizr-min.js"></script>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+    <!--<![endif]-->
+
     <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/base.css?20150507" />
     <!-- bootstrap -->

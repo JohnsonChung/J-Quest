@@ -17,7 +17,8 @@ pre {
 var confirmed = false;
 
 function contactOnSubmit() {
-    if(confirmed) return true;
+  if(!$("#mailform").checkValidity()) return false;
+  if(confirmed) return true;
 
   var fields = [{
     label: "ご利用店舗",
@@ -114,6 +115,10 @@ $(function() {
             }
         }
     });
+
+    if(!Modernizr.input.required) {
+        webshim.polyfill('forms');
+    }
 });
     
 </script>
