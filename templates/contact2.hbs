@@ -17,11 +17,15 @@ pre {
 var confirmed = false;
 
 function contactOnSubmit() {
-    if(confirmed) return true;
+  if(!$("#mailform").checkValidity()) return false;
+  if(confirmed) return true;
 
   var fields = [{
     label: "ご利用店舗",
-    selector: "select[name=available_store]"
+    selector: "select[name=available_store]",
+    transform: function($e) {
+        return $e.find("option:checked").html();
+    }
   }, {
     label: "ご意見・お問い合わせ",
     selector: "textarea[name=opinions_enquiries]"
@@ -43,8 +47,8 @@ function contactOnSubmit() {
   }, {
     label: "弊社からお客様へのご回答方法",
     selector: "input[name=contact_method]:checked",
-    transform: function(value) {
-      switch (value) {
+    transform: function($ele) {
+      switch ($ele.val()) {
         case "telephone":
           return "電話希望";
         case "mail":
@@ -79,7 +83,7 @@ function contactOnSubmit() {
     
     var content = $(fields[i].selector).val();
     if($.isFunction(fields[i].transform)) {
-      content = fields[i].transform(content);
+      content = fields[i].transform($(fields[i].selector));
     }
     var $pre = $("<pre>");
     $pre.html(content);
@@ -93,6 +97,30 @@ function confirmSubmit() {
     confirmed = true;
     $("#mailform input[type=submit]").click();
 }
+
+$(function() {
+    var $select = $("select[name=available_store]");
+    $.get("https://www.j-quest.jp/contact3/stores", function(data) {
+        if($.isArray(data) && data.length) {
+            for(var i = 0;i < data.length;i++) {
+                var prefecture = data[i];
+                var stores = prefecture.stores;
+                var $optgroup = $("<optgroup/>").attr("label", prefecture.name);
+                for(var j = 0;j < stores.length;j++) {
+                    var store = stores[j];
+                    var $option = $("<option/>").attr("value", store.id).html(store.name);
+                    $optgroup.append($option);
+                }
+                $select.append($optgroup);
+            }
+        }
+    });
+
+    if(!Modernizr.input.required) {
+        webshim.polyfill('forms');
+    }
+});
+    
 </script>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -109,7 +137,7 @@ function confirmSubmit() {
         </div>
       </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-primary" onclick="confirmSubmit()">送　信</button>
+        <button type="button" class="btn btn-primary" onclick="confirmSubmit()">確 認</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">戻　る</button>
       </div>
     </div>
@@ -121,12 +149,13 @@ function confirmSubmit() {
     <p>弊社へのご意見・お問合せは、下記ご入力の上「送信」ボタンをクリックしてください。
         <br />（<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）</p>
     <div class="form" summary="入力フォーム">
-        <form id="mailform" class="form-horizontal" method="post" action="/contact2/submitContact.php" onsubmit="return contactOnSubmit()">
+        <form id="mailform" class="form-horizontal" method="post" action="/contact3/enquiry" onsubmit="return contactOnSubmit()">
             <div class="form-group">
                 <div class="title col-md-3">ご利用店舗  <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
                     <select class="form-control" name="available_store" id="ご利用店舗" required>
                         <option value="">選択してください</option>
+                        <!--
                         <OPTGROUP label=北海道>
                             <option value="北海道 大曲店">大曲店</option>
                         </OPTGROUP>
@@ -244,6 +273,7 @@ function confirmSubmit() {
                             <option value="兵庫県 篠山店">篠山店</option>
                             <option value="兵庫県 氷上店">氷上店</option>
                         </OPTGROUP>
+                        -->
                     </select>
                 </div>
             </div>
@@ -420,8 +450,8 @@ function confirmSubmit() {
             })();
             </script>
             <div class="form-group">
-                <div colspan="2" align="center">
-                    <input class="btn btn-success" type="submit" value="送 信" />
+                <div align="center">
+                    <input class="btn btn-success" type="submit" value="確 認" />
                     <input class="btn btn-default" type="reset" name="reset" value="リセット" />
                 </div>
             </div>
