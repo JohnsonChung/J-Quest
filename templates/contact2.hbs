@@ -17,7 +17,7 @@ pre {
 var confirmed = false;
 
 function contactOnSubmit() {
-  if(!$("#mailform").checkValidity()) return false;
+  if(!$("#mailform")[0].checkValidity()) return false;
   if(confirmed) return true;
 
   var fields = [{
