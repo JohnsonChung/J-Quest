@@ -21,6 +21,8 @@
     "handlebars": "~3.0.0",
     "flickity": "~1.0.0",
     "respond": "~1.4.2",
-    "director": "~1.2.8"
+    "director": "~1.2.8",
+    "bootstrap-sweetalert": "~0.4.5",
+    "sweetalert": "~1.1.3"
   }
 }

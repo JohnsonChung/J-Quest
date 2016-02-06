@@ -23,6 +23,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment-with-locales.min.js"></script>
 
     <!--[if IE]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webshim/1.15.10/minified/polyfiller.js"></script>
@@ -32,7 +33,7 @@
     <!--<![endif]-->
 
     <!-- stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/base.css?20150507" />
+    <link rel="stylesheet" type="text/css" href="css/base.css?20160206" />
     <!-- bootstrap -->
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- flickity -->
@@ -40,7 +41,7 @@
     <script type="text/javascript" src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
     <script src="js/rollover2.js"></script>
     <script src="php/hbs.js"></script>
-    <script src="php/script.js?4"></script>
+    <script src="php/script.js?20160206"></script>
     <script src="js/script.js"></script>
 </head>
 

@@ -15,8 +15,8 @@ RewriteRule campaign\.html subpage.php?p=campaign [R=301,L]
 RewriteRule contact/contactus.html subpage.php?p=contact [R=301,L]
 RewriteRule faq\.html subpage.php?p=faq [R=301,L]
 
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 <filesMatch "\.(html|htm)$">
   FileETag None

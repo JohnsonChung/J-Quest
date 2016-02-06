@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    moment.locale('ja');
     var search = searchToObject();
     if(search.hasOwnProperty('p')) {
         $(".side-nav").find("a").each(function(i, e) {
@@ -28,8 +29,21 @@ $(document).ready(function() {
             case 'contact':
             case 'contact2':
                 if(search.hasOwnProperty('submit_success')) {
-                    alert("送信成功");
-                    window.location.href = "/";
+                    var title = "受付完了";
+                    var time = moment().format('LLLL');
+                    var message = '<h3 align="center">' + time + '</h3><div align="left">' +
+                    "この度は弊社ホームページにお問い合わせいただきまして誠にありがとうございます。" + "<br>" +
+                    "頂きましたご意見は今後のサービス向上に役立たせていただきます。" + "<br>" +
+                    "また、返信をご希望されたお客様へは担当者より連絡させていただきます。" +
+                    "</div>";
+                    swal({
+                        title: title,
+                        text: message,
+                        html: true,
+                        type: "success"
+                    }, function() {
+                        window.location.href = "/";
+                    });
                 }
             break;
         }
