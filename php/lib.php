@@ -4,6 +4,10 @@ function tpl($target) {
 }
 
 function main() {
+	global $env;
+
+	$env = strstr($_SERVER['HTTP_HOST'], 'j-quest.jp') ? 'production' : 'testing';
+
 	if (isset($_GET['p'])) {
 		$pages = array(
 			"sideNav",
@@ -39,7 +43,12 @@ function main() {
 					$p = $_GET['p'];
 			}
 
-			echo file_get_contents('templates/' . $p . '.hbs');
+			include 'templates/' . $p . '.hbs';
 		}
 	}
+}
+
+function isProduction() {
+	global $env;
+	return $env === 'production';
 }

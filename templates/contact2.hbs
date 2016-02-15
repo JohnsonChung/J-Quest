@@ -97,6 +97,7 @@ function contactOnSubmit() {
 }
 
 function confirmSubmit() {
+    if(confirmed) return;
     confirmed = true;
     $("#mailform input[type=submit]").click();
 }
@@ -152,131 +153,12 @@ $(function() {
     <p>弊社へのご意見・お問合せは、下記ご入力の上「送信」ボタンをクリックしてください。
         <br />（<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）</p>
     <div class="form" summary="入力フォーム">
-        <form id="mailform" class="form-horizontal" method="post" action="/contact3/enquiry" onsubmit="return contactOnSubmit()">
+        <form id="mailform" class="form-horizontal" method="post" action="<?php if(isProduction()): ?>/contact3/enquiry<?php else: ?>/jquest-contact/enquiry<?php endif; ?>" onsubmit="return contactOnSubmit()">
             <div class="form-group">
                 <div class="title col-md-3">ご利用店舗  <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
                     <select class="form-control" name="available_store" id="ご利用店舗" required>
                         <option value="">選択してください</option>
-                        <!--
-                        <OPTGROUP label=北海道>
-                            <option value="北海道 大曲店">大曲店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=宮城県>
-                            <option value="宮城県 名取店">名取店</option>
-                            <option value="宮城県 富谷店">仙台富谷店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=茨城県>
-                            <option value="茨城県 北茨城店">北茨城店</option>
-                            <option value="茨城県 岩瀬店">岩瀬店</option>
-                            <option value="茨城県 玉造店">玉造店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=栃木県>
-                            <option value="栃木県 今市店">今市店</option>
-                            <option value="栃木県 真岡店">真岡店</option>
-                            <option value="栃木県 大田原店">大田原店</option>
-                            <option value="栃木県 アクロスプラザ西那須野店">アクロスプラザ西那須野店</option>
-                            <option value="栃木県 黒磯店">黒磯店</option>
-                            <option value="栃木県 西那須野店">西那須野店</option>
-                            <option value="栃木県 益子店">益子店</option>
-                            <option value="栃木県 大平店">大平店</option>
-                            <option value="栃木県 さくら氏家店">さくら氏家店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=群馬県>
-                            <option value="群馬県 前橋店">前橋店</option>
-                            <option value="群馬県 前橋みなみ店">前橋みなみ店</option>
-                            <option value="群馬県 宮子カインズ前店">宮子カインズ前店</option>
-                            <option value="群馬県 赤堀店">赤堀店</option>
-                            <option value="群馬県 佐波東店">佐波東店</option>
-                            <option value="群馬県 宮子ベイシア前店">宮子ベイシア前店</option>
-                            <option value="群馬県 尾島店">尾島店</option>
-                            <option value="群馬県 沼田店">沼田店</option>
-                            <option value="群馬県 渋川店">渋川店</option>
-                            <option value="群馬県 鯉沢店">鯉沢店</option>
-                            <option value="群馬県 富岡店">富岡店</option>
-                            <option value="群馬県 富士見店">富士見店</option>
-                            <option value="群馬県 吉井店">吉井店</option>
-                            <option value="群馬県 甘楽店">甘楽店</option>
-                            <option value="群馬県 月夜野店">月夜野店</option>
-                            <option value="群馬県 大泉店">大泉店</option>
-                            <option value="群馬県 高崎新保店">高崎新保店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=埼玉県>
-                            <option value="埼玉県 行田店">行田店</option>
-                            <option value="埼玉県 川本店">川本店</option>
-                            <option value="埼玉県 鶴ヶ島店">鶴ヶ島店</option>
-                            <option value="埼玉県 滑川店">滑川店</option>
-                            <option value="埼玉県 嵐山店">嵐山店</option>
-                            <option value="埼玉県 川島店">川島店</option>
-                            <option value="埼玉県 栗橋店">栗橋店</option>
-                            <option value="埼玉県 大利根店">大利根店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=千葉県>
-                            <option value="千葉県 ちば古市場店">ちば古市場店</option>
-                            <option value="千葉県 銚子店">銚子店</option>
-                            <option value="千葉県 佐倉店">佐倉店</option>
-                            <option value="千葉県 鴨川店">鴨川店</option>
-                            <option value="千葉県 富津店">富津店</option>
-                            <option value="千葉県 八日市場店">八日市場店</option>
-                            <option value="千葉県 大原店">大原店</option>
-                            <option value="千葉県 小見川店">小見川店</option>
-                            <option value="千葉県 大網白里店">大網白里店</option>
-                            <option value="千葉県 長生店">長生店</option>
-                            <option value="千葉県 市原五井店">市原五井店</option>
-                            <option value="千葉県 酒々井店">酒々井店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=東京都>
-                            <option value="東京都 町田店">町田店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=新潟県>
-                            <option value="新潟県 豊栄店">豊栄店</option>
-                            <option value="新潟県 新津店">新津店</option>
-                            <option value="新潟県 長岡店">長岡店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=富山県>
-                            <option value="富山県 大沢野店">大沢野店</option>
-                            <option value="富山県 高岡中曽根店">高岡中曽根店</option>
-                            <option value="富山県 黒部店">黒部店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=長野県>
-                            <option value="長野県 小諸店">小諸店</option>
-                            <option value="長野県 大町店">大町店</option>
-                            <option value="長野県 飯山店">飯山店</option>
-                            <option value="長野県 佐久平店">佐久平店</option>
-                            <option value="長野県 堀金店">堀金店</option>
-                            <option value="長野県 豊科店">豊科店</option>
-                            <option value="長野県 中野小布施店">中野小布施店</option>
-                            <option value="長野県 長野稲田店">長野稲田店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=岐阜県>
-                            <option value="岐阜県 関店">関店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=静岡県>
-                            <option value="静岡県 浜松雄踏店">浜松雄踏店</option>
-                            <option value="静岡県 浜松都田店">浜松都田店</option>
-                            <option value="静岡県 大東店">大東店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=愛知県>
-                            <option value="愛知県 蒲郡店">蒲郡店</option>
-                            <option value="愛知県 常滑店">常滑店</option>
-                            <option value="愛知県 三好店">三好店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=三重県>
-                            <option value="三重県 桑名店">桑名店</option>
-                            <option value="三重県 みえ川越店">みえ川越店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=滋賀県>
-                            <option value="滋賀県 彦根店">彦根店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=京都府>
-                            <option value="京都府 綾部店">綾部店</option>
-                            <option value="京都府 木津川店">木津川店</option>
-                        </OPTGROUP>
-                        <OPTGROUP label=兵庫県>
-                            <option value="兵庫県 篠山店">篠山店</option>
-                            <option value="兵庫県 氷上店">氷上店</option>
-                        </OPTGROUP>
-                        -->
                     </select>
                 </div>
             </div>
@@ -459,6 +341,10 @@ $(function() {
                 </div>
             </div>
             <input type="hidden" name="submit" value="1" />
+
+            <?php if(isset($_GET['test'])): ?>
+            <input type="hidden" name="test" value="1" />
+            <?php endif;?>
         </form>
         <!-- <link rel="stylesheet" href="mailform/mailform.css" type="text/css"> -->
         <script type="text/javascript" src="https://www.j-quest.jp/contact/mailform/mailform.js" charset="utf-8"></script>
