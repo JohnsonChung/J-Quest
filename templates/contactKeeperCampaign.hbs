@@ -27,7 +27,7 @@
     <div class="form" summary="入力フォーム">
         <form id="mailform" class="form-horizontal" method="post" action="<?php if(isProduction()): ?>/contact3/enquiry<?php else: ?>/jquest-contact/enquiry<?php endif; ?>" onsubmit="return contactOnSubmit()">
             <div class="form-group">
-                <div class="title col-md-3">ご利用店舗<span style="color:#cc0000;">※</span>  </div>
+                <div class="title col-md-3">ご利用店舗 <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
                     <select class="form-control" name="available_store" id="ご利用店舗" required>
                         <option value="">選択してください</option>
@@ -74,16 +74,15 @@
                 </div>
             </div>
             <div class="form-group group-telephone">
-                <div class="title col-md-3">電話番号（半角）<span style="color:#cc0000;">※</span></div>
+                <div class="title col-md-3">電話番号（半角）<span style="color:#cc0000; margin-left: -3px;">※</span></div>
                 <div class="about col-md-6">
                     <input class="form-control hankaku" type="text" name="telephone_number"> &nbsp;(例:03-1000-0000)
                 </div>
             </div>
             <div class="form-group">
-                <div class="title col-md-3">お問合せ
-                    <br />（全角300字程度）</div>
+                <div class="title col-md-3">お問合せ</div>
                 <div class="about col-md-9">
-                    <textarea name="opinions_enquiries" class="zenkaku form-control" rows="10"></textarea>
+                    <textarea name="opinions_enquiries" class="zenkaku form-control" rows="6"></textarea>
                 </div>
             </div>
             <div class="form-group">
