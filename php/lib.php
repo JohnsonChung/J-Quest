@@ -31,6 +31,8 @@ function main() {
 			"recruit/recruit-work",
 			"service",
 			"shop",
+			"contactKeeperCampaign",
+			"shopKeeperCampaign",
 		);
 
 		if (in_array($_GET['p'], $pages)) {
