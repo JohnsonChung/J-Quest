@@ -41,8 +41,15 @@
     <script type="text/javascript" src="bower_components/flickity/dist/flickity.pkgd.min.js"></script>
     <script src="js/rollover2.js"></script>
     <script src="php/hbs.js"></script>
-    <script src="php/script.js?20160206"></script>
+    <script src="php/script.js?20161031"></script>
     <script src="js/script.js"></script>
+    <script>
+        <?php if(isProduction()) { ?>
+        window.isProduction = true;
+        <?php } else { ?>
+        window.isProduction = false;
+        <?php } ?>
+    </script>
 </head>
 
 <body>

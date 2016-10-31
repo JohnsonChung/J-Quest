@@ -1,3 +1,91 @@
+<link href="bower_components/sweetalert/dist/sweetalert.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.19/i18n/jquery-ui-i18n.min.js"></script>
+<script src="js/lib.js"></script>
+
+<script>
+    var confirmed = false;
+
+    $(function () {
+        $.datepicker.setDefaults($.datepicker.regional["ja"]);
+        $("#datepicker").datepicker({
+            minDate: new Date()
+        });
+
+        var $select = $("select[name=available_store]");
+        loadStores($select);
+
+        if(!Modernizr.input.required) {
+            webshim.polyfill('forms');
+        }
+    });
+
+    function contactOnSubmit() {
+        if(!$("#mailform")[0].checkValidity()) return false;
+        if(confirmed) return true;
+
+        var fields = [{
+            label: "ご利用店舗",
+            selector: "select[name=available_store]",
+            transform: function($e) {
+                return $e.find("option:checked").html();
+            }
+        }, {
+            label: "ご希望日時",
+            selector: "input[name=date]"
+        }, {
+            label: "ご希望コース",
+            selector: "input[name=coating]:checked",
+            transform: function($ele) {
+                return $ele.val();
+            }
+        }, {
+            label: "お名前",
+            selector: "input[name=name]"
+        }, {
+            label: "電話番号",
+            selector: "input[name=telephone_number]"
+        }, {
+            label: "ご意見・お問い合わせ",
+            selector: "textarea[name=opinions_enquiries]"
+        }];
+
+        var $m = $("#myModal");
+        $m.modal();
+
+        var $table = $("#confirm-fields", $m);
+        $table.empty();
+        for(var i = 0;i < fields.length;i++) {
+            var $tr = $("<tr>");
+            $table.append($tr);
+
+            var $td1 = $("<th>"), $td2 = $("<td>");
+            $tr.append($td1);
+            $tr.append($td2);
+
+            $td1.html(fields[i].label);
+
+            var content = $(fields[i].selector).val();
+            if($.isFunction(fields[i].transform)) {
+                content = fields[i].transform($(fields[i].selector));
+            }
+            var $pre = $("<pre>");
+            $pre.html(content);
+            $td2.append($pre);
+        }
+
+        return false;
+    }
+
+    function confirmSubmit() {
+        if(confirmed) return;
+        confirmed = true;
+        $("#mailform input[type=submit]").click();
+    }
+</script>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -25,7 +113,7 @@
         （<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）
     </p>
     <div class="form" summary="入力フォーム">
-        <form id="mailform" class="form-horizontal" method="post" action="<?php if(isProduction()): ?>/contact3/enquiry<?php else: ?>/jquest-contact/enquiry<?php endif; ?>" onsubmit="return contactOnSubmit()">
+        <form id="mailform" class="form-horizontal" method="post" action="/contact3/event-enquiry" onsubmit="return contactOnSubmit()">
             <div class="form-group">
                 <div class="title col-md-3">ご利用店舗 <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
@@ -36,32 +124,34 @@
             </div>
             <div class="form-group">
                 <div class="title col-md-3">ご希望日時</div>
-                <div class="about col-md-5">...</div>
+                <div class="about col-md-5">
+                    <input id="datepicker" name="date" class="form-control" value="" />
+                </div>
             </div>
             <div class="form-group">
                 <div class="title col-md-3">ご希望コース</div>
                 <div class="about col-md-5">
                     <div class="radio">
                         <label>
-                            <input type="radio" name="coating" id="pureCoating" value="pureCoating">
+                            <input type="radio" name="coating" id="pureCoating" value="ピュアコーティング">
                             ピュアコーティング
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="coating" id="cristalCoating" value="cristalCoating">
+                            <input type="radio" name="coating" id="cristalCoating" value="クリスタルコーティング">
                             クリスタルコーティング
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="coating" id="diamondCoating" value="diamondCoating">
+                            <input type="radio" name="coating" id="diamondCoating" value="ダイヤモンドコーティング">
                             ダイヤモンドコーティング
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="coating" id="otherCoating" value="otherCoating">
+                            <input type="radio" name="coating" id="otherCoating" value="その他の施工">
                             その他の施工
                         </label>
                     </div>
@@ -70,13 +160,13 @@
             <div class="form-group">
                 <div class="title col-md-3">お名前（全角）<span style="color:#cc0000;">※</span></div>
                 <div class="about col-md-5">
-                    <input class="form-control" type="text" name="name" value="">
+                    <input class="form-control" type="text" name="name" value="" required>
                 </div>
             </div>
             <div class="form-group group-telephone">
                 <div class="title col-md-3">電話番号（半角）<span style="color:#cc0000; margin-left: -3px;">※</span></div>
                 <div class="about col-md-6">
-                    <input class="form-control hankaku" type="text" name="telephone_number"> &nbsp;(例:03-1000-0000)
+                    <input class="form-control hankaku" type="text" name="telephone_number" required> &nbsp;(例:03-1000-0000)
                 </div>
             </div>
             <div class="form-group">

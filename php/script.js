@@ -28,6 +28,7 @@ $(document).ready(function() {
 
             case 'contact':
             case 'contact2':
+            case 'contactKeeperCampaign':
                 if(search.hasOwnProperty('submit_success')) {
                     var title = "受付完了";
                     var time = moment().format('LLLL');

@@ -16,6 +16,7 @@ pre {
   word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 </style>
+<script src="js/lib.js"></script>
 <script>
 var confirmed = false;
 
@@ -104,21 +105,7 @@ function confirmSubmit() {
 
 $(function() {
     var $select = $("select[name=available_store]");
-    $.get("https://www.j-quest.jp/contact3/stores", function(data) {
-        if($.isArray(data) && data.length) {
-            for(var i = 0;i < data.length;i++) {
-                var prefecture = data[i];
-                var stores = prefecture.stores;
-                var $optgroup = $("<optgroup/>").attr("label", prefecture.name);
-                for(var j = 0;j < stores.length;j++) {
-                    var store = stores[j];
-                    var $option = $("<option/>").attr("value", store.id).html(store.name);
-                    $optgroup.append($option);
-                }
-                $select.append($optgroup);
-            }
-        }
-    });
+    loadStores($select);
 
     if(!Modernizr.input.required) {
         webshim.polyfill('forms');
@@ -153,7 +140,7 @@ $(function() {
     <p>弊社へのご意見・お問合せは、下記ご入力の上「送信」ボタンをクリックしてください。
         <br />（<span style="color:#cc0000;">※</span>はお客様に必ずご回答させていただくために入力をお願いしております。）</p>
     <div class="form" summary="入力フォーム">
-        <form id="mailform" class="form-horizontal" method="post" action="<?php if(isProduction()): ?>/contact3/enquiry<?php else: ?>/jquest-contact/enquiry<?php endif; ?>" onsubmit="return contactOnSubmit()">
+        <form id="mailform" class="form-horizontal" method="post" action="/contact3/enquiry" onsubmit="return contactOnSubmit()">
             <div class="form-group">
                 <div class="title col-md-3">ご利用店舗  <span style="color:#cc0000;">※</span>  </div>
                 <div class="about col-md-6">
